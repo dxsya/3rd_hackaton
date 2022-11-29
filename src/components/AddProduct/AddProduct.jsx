@@ -1,9 +1,12 @@
 import { Button, FormControl, TextField } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useProducts } from '../../contexts/ProductContextProvider';
 
 const AddProduct = () => {
+    const navigate = useNavigate();
+
     const { addProduct } = useProducts();
 
     const [product, setProduct] = useState({
@@ -64,7 +67,10 @@ const AddProduct = () => {
                         sx={{ margin: '1%' }}
                     />
                     <Button
-                        onClick={() => addProduct(product)}
+                        onClick={() => {
+                            addProduct(product);
+                            navigate('/products');
+                        }}
                         variant="outlined"
                         sx={{ margin: '1%' }}
                     >

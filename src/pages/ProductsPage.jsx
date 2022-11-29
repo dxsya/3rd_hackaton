@@ -1,11 +1,16 @@
+import { Box } from '@mui/material';
 import React from 'react';
 import ProductList from '../components/ProductList/ProductList';
 
 const ProductsPage = () => {
     return (
-        <div>
+        <Box
+            sx={{
+                backgroundColor: '#f3f3f3',
+            }}
+        >
             <ProductList />
-        </div>
+        </Box>
     );
 };
 
