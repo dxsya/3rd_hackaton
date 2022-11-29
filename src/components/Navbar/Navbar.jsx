@@ -12,6 +12,9 @@ const Navbar = () => {
                 <ListItem onClick={() => navigate('/addProduct')}>
                     Add product
                 </ListItem>
+                <ListItem onClick={() => navigate('/products')}>
+                    products
+                </ListItem>
             </List>
         </>
     );
