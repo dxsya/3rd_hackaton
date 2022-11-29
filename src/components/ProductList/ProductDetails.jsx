@@ -29,7 +29,7 @@ const ProductDetails = () => {
                 >
                     Delete
                 </Button>
-                <Button>Edit</Button>
+                <Button onClick={() => navigate(`edit/${id}`)}>Edit</Button>
             </Box>
         </div>
     );

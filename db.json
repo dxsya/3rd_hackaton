@@ -10,21 +10,13 @@
       "id": 1
     },
     {
-      "title": "zxc",
-      "description": "asdasd",
-      "price": 0,
-      "picture": "asda",
-      "type": "asdasd",
+      "title": "zxc3232",
+      "description": "asdasd32",
+      "price": "32",
+      "picture": "asda32",
+      "type": "asdasd32",
       "": null,
       "id": 2
-    },
-    {
-      "title": "12412",
-      "description": "124124214",
-      "price": 12412412,
-      "picture": "12412",
-      "type": "12412412412412",
-      "id": 4
     }
   ],
   "blogs": []
