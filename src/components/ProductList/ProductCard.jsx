@@ -15,7 +15,7 @@ const ProductCard = ({ item }) => {
                     flexDirection: 'column',
                     alignContent: 'center',
                     alignItems: 'center',
-                    pt: '2%',
+                    p: '2% 0',
                     borderRadius: '8px',
                     boxShadow: '0px 0px 15px 3px rgba(0,0,0,0.2)',
                 }}
@@ -42,7 +42,18 @@ const ProductCard = ({ item }) => {
                 >
                     <s>{item.price * 1.4}р</s>
                 </Typography>
-                <Button onClick={() => navigate(`/productDetails/${item.id}`)}>
+                <Button
+                    onClick={() => navigate(`/productDetails/${item.id}`)}
+                    sx={{
+                        width: '90%',
+                        backgroundColor: '#01cc65',
+                        padding: '8px',
+                        fontSize: '18px',
+                        color: 'white',
+                        fontWeight: 600,
+                        mt: 2,
+                    }}
+                >
                     details
                 </Button>
             </Box>
