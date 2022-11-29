@@ -9,7 +9,9 @@ const Navbar = () => {
             <List sx={{ display: 'flex', backgroundColor: 'green' }}>
                 <ListItem onClick={() => navigate('/')}>Logo</ListItem>
                 <ListItem onClick={() => navigate('/auth')}>Auth</ListItem>
-                <ListItem>Home</ListItem>
+                <ListItem onClick={() => navigate('/addProduct')}>
+                    Add product
+                </ListItem>
             </List>
         </>
     );
