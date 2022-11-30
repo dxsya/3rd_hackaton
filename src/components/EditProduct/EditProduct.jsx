@@ -1,30 +1,29 @@
 import { Button, FormControl, TextField } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useProducts } from '../../contexts/ProductContextProvider';
 
 const AddProduct = () => {
+    const { productDetails, getProductDetails, saveEditedProduct } =
+        useProducts();
+
+    const [product, setProduct] = useState(productDetails);
+    const { id } = useParams();
+
+    useEffect(() => {
+        getProductDetails();
+    }, []);
+
+    useEffect(() => {
+        setProduct(productDetails);
+    }, [productDetails]);
+
     const navigate = useNavigate();
 
-    const { addProduct } = useProducts();
-
-    const [product, setProduct] = useState({
-        title: '',
-        description: '',
-        price: 0,
-        picture: '',
-        type: '',
-    });
-
     const handleInput = (e) => {
-        if (e.target.name === 'price') {
-            let obj = { ...product, [e.target.name]: Number(e.target.value) };
-            setProduct(obj);
-        } else {
-            let obj = { ...product, [e.target.name]: e.target.value };
-            setProduct(obj);
-        }
+        let obj = { ...product, [e.target.name]: e.target.value };
+        setProduct(obj);
     };
 
     return (
@@ -37,6 +36,7 @@ const AddProduct = () => {
                         size="small"
                         name="title"
                         sx={{ margin: '1%' }}
+                        value={product.title || ''}
                     />
                     <TextField
                         onChange={handleInput}
@@ -44,6 +44,7 @@ const AddProduct = () => {
                         size="small"
                         name="picture"
                         sx={{ margin: '1%' }}
+                        value={product.picture || ''}
                     />
                     <TextField
                         onChange={handleInput}
@@ -51,6 +52,7 @@ const AddProduct = () => {
                         size="small"
                         name="price"
                         sx={{ margin: '1%' }}
+                        value={product.price || ''}
                     />
                     <TextField
                         onChange={handleInput}
@@ -58,6 +60,7 @@ const AddProduct = () => {
                         size="small"
                         name="description"
                         sx={{ margin: '1%' }}
+                        value={product.description || ''}
                     />
                     <TextField
                         onChange={handleInput}
@@ -65,16 +68,17 @@ const AddProduct = () => {
                         size="small"
                         name="type"
                         sx={{ margin: '1%' }}
+                        value={product.type || ''}
                     />
                     <Button
                         onClick={() => {
-                            addProduct(product);
+                            saveEditedProduct(product, id);
                             navigate('/products');
                         }}
                         variant="outlined"
                         sx={{ margin: '1%' }}
                     >
-                        Добавить Товар
+                        Изменить Товар
                     </Button>
                 </FormControl>
             </Box>
