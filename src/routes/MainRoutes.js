@@ -1,3 +1,4 @@
+
 import React from 'react';
 import HomePage from '../pages/HomePage';
 import AuthPage from '../pages/AuthPage';
@@ -19,6 +20,7 @@ const MainRoutes = () => {
             element: <EditProductPage />,
             id: 7,
         },
+
     ];
 
     return (
