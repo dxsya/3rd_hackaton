@@ -60,7 +60,7 @@ const Navbar = () => {
                         <StarOutlineOutlinedIcon />
                     </ListItem>
                     <ListItem>
-                        <Badge badgeContent={17} color="error">
+                        <Badge badgeContent={98} color="secondary">
                             <ShoppingCartOutlinedIcon />
                         </Badge>
                     </ListItem>

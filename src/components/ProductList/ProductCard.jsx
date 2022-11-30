@@ -20,7 +20,7 @@ const ProductCard = ({ item }) => {
                     boxShadow: '0px 0px 15px 3px rgba(0,0,0,0.2)',
                 }}
             >
-                <img src={item.picture} alt={item.title} width={'200px'} />
+                <img src={item.picture} alt={item.title} width={'70%'} />
 
                 <Typography
                     sx={{
