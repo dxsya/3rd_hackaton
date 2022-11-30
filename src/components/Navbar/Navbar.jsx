@@ -1,3 +1,4 @@
+
 import { Badge, List, ListItem } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
@@ -6,6 +7,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import StarOutlineOutlinedIcon from '@mui/icons-material/StarOutlineOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import { useCart } from '../../contexts/CartContextProvider';
+
 
 const Navbar = () => {
     const { cart } = useCart();
@@ -19,6 +21,7 @@ const Navbar = () => {
     const navigate = useNavigate();
     return (
         <>
+
             <List
                 sx={{
                     display: 'flex',
