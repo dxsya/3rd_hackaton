@@ -65,7 +65,11 @@ const Footer = () => {
                     </ListItem>
                     <ListItem
                         onClick={() => navigate('/cart')}
-                        sx={{ cursor: 'pointer', justifyContent: 'center' }}
+                        sx={{
+                            cursor: 'pointer',
+                            justifyContent: 'center',
+                            textAlign: 'center',
+                        }}
                     >
                         Оптовые цены
                     </ListItem>
