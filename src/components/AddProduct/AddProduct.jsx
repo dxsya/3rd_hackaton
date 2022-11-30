@@ -1,4 +1,10 @@
-import { Button, FormControl, TextField } from '@mui/material';
+import {
+    Button,
+    Checkbox,
+    FormControl,
+    TextField,
+    Typography,
+} from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -15,6 +21,7 @@ const AddProduct = () => {
         price: 0,
         picture: '',
         type: '',
+        anime: false,
     });
 
     const handleInput = (e) => {
@@ -25,6 +32,13 @@ const AddProduct = () => {
             let obj = { ...product, [e.target.name]: e.target.value };
             setProduct(obj);
         }
+    };
+    const [checked, setChecked] = React.useState(false);
+
+    const handleChange = (e) => {
+        setChecked(e.target.checked);
+        let obj = { ...product, [e.target.name]: !checked };
+        setProduct(obj);
     };
 
     return (
@@ -66,10 +80,20 @@ const AddProduct = () => {
                         name="type"
                         sx={{ margin: '1%' }}
                     />
+                    <Box sx={{ display: 'flex' }}>
+                        <Typography>Аниме коллекция?</Typography>{' '}
+                        <Checkbox
+                            checked={checked}
+                            onChange={handleChange}
+                            name="anime"
+                            inputProps={{ 'aria-label': 'controlled' }}
+                        />
+                    </Box>
+
                     <Button
                         onClick={() => {
                             addProduct(product);
-                            navigate('/products');
+                            // navigate('/products');
                         }}
                         variant="outlined"
                         sx={{ margin: '1%' }}

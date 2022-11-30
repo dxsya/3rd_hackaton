@@ -5,8 +5,17 @@ import { useNavigate } from 'react-router-dom';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import StarOutlineOutlinedIcon from '@mui/icons-material/StarOutlineOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import { useCart } from '../../contexts/CartContextProvider';
 
 const Navbar = () => {
+    const { cart } = useCart();
+    function productCount(cart) {
+        let total = 0;
+        cart.products.map((item) => {
+            total += +item.count;
+        });
+        return total;
+    }
     const navigate = useNavigate();
     return (
         <>
@@ -65,8 +74,15 @@ const Navbar = () => {
                     <ListItem>
                         <StarOutlineOutlinedIcon />
                     </ListItem>
-                    <ListItem onClick={() => navigate('/cart')}>
-                        <Badge badgeContent={98} color="secondary">
+                    <ListItem
+                        onClick={() => {
+                            navigate('/cart');
+                        }}
+                    >
+                        <Badge
+                            badgeContent={productCount(cart)}
+                            color="success"
+                        >
                             <ShoppingCartOutlinedIcon />
                         </Badge>
                     </ListItem>

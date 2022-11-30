@@ -183,8 +183,9 @@ const Footer = () => {
                         >
                             IMBA.SHOP
                         </ListItem>
-                        {imbashop.map((item) => (
+                        {imbashop.map((item, index) => (
                             <ListItem
+                                key={index}
                                 sx={{
                                     lineHeight: '75%',
                                     textDecoration: 'underline',
