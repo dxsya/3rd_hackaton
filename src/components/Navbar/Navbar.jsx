@@ -9,6 +9,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import { useCart } from '../../contexts/CartContextProvider';
 
 
+
 const Navbar = () => {
     const { cart } = useCart();
     function productCount(cart) {
