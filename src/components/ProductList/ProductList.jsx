@@ -5,6 +5,7 @@ import { useProducts } from '../../contexts/ProductContextProvider';
 import { JSON_API_PRODUCTS } from '../../helpers/consts';
 import ProductCard from './ProductCard';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { getRandomProducts } from '../../helpers/functions';
 
 const ProductList = () => {
     const { products, getProducts } = useProducts();
@@ -130,6 +131,8 @@ const ProductList = () => {
                     width: '85%',
                     margin: '0 auto',
                     mt: 8,
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-around',
                 }}
             >
                 {products.map((item) => (
