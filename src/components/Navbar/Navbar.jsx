@@ -32,29 +32,35 @@ const Navbar = () => {
                 <Box
                     sx={{
                         display: 'flex',
-                        width: '60%',
+                        width: '40%',
                         justifyContent: 'center',
                     }}
                 >
                     <ListItem
                         onClick={() => navigate('/addProduct')}
-                        sx={{ padding: '1% 0', width: '15%' }}
+                        sx={{ padding: '1% 0', justifyContent: 'center' }}
                     >
                         Add product
                     </ListItem>
                     <ListItem
-                        sx={{ padding: '1% 0', width: '10%' }}
+                        sx={{ padding: '1% 0', justifyContent: 'center' }}
                         onClick={() => navigate('/products')}
                     >
                         магазин
                     </ListItem>
-                    <ListItem sx={{ padding: '1% 0', width: '10%' }}>
+                    <ListItem
+                        sx={{ padding: '1% 0', justifyContent: 'center' }}
+                    >
                         оплата
                     </ListItem>
-                    <ListItem sx={{ padding: '1% 0', width: '10%' }}>
+                    <ListItem
+                        sx={{ padding: '1% 0', justifyContent: 'center' }}
+                    >
                         блоги
                     </ListItem>
-                    <ListItem sx={{ padding: '1% 0', width: '10%' }}>
+                    <ListItem
+                        sx={{ padding: '1% 0', justifyContent: 'center' }}
+                    >
                         что-то
                     </ListItem>
                 </Box>
@@ -62,7 +68,7 @@ const Navbar = () => {
                     <ListItem>
                         <StarOutlineOutlinedIcon />
                     </ListItem>
-                    <ListItem>
+                    <ListItem onClick={() => navigate('/cart')}>
                         <Badge badgeContent={98} color="secondary">
                             <ShoppingCartOutlinedIcon />
                         </Badge>

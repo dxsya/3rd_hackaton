@@ -83,7 +83,7 @@ const Footer = () => {
                 <Divider sx={{ backgroundColor: 'white' }} />
                 <Box
                     sx={{
-                        color: 'white',
+                        color: 'gray',
                         width: '90%',
                         margin: '0 auto',
                         display: 'flex',
@@ -99,7 +99,13 @@ const Footer = () => {
                         </ListItem>
                     </List>
                     <List>
-                        <ListItem sx={{ fontSize: '1.3em', fontWeight: 800 }}>
+                        <ListItem
+                            sx={{
+                                fontSize: '1.3em',
+                                fontWeight: 800,
+                                color: 'white',
+                            }}
+                        >
                             Контакты
                         </ListItem>
                         <ListItem>info@imba.shop</ListItem>
@@ -107,7 +113,13 @@ const Footer = () => {
                         <ListItem>(ПН - ПТ) 10:00 -19:00</ListItem>
                     </List>
                     <List>
-                        <ListItem sx={{ fontSize: '1.3em', fontWeight: 800 }}>
+                        <ListItem
+                            sx={{
+                                fontSize: '1.3em',
+                                fontWeight: 800,
+                                color: 'white',
+                            }}
+                        >
                             Оплата
                         </ListItem>
                         <ListItem>
@@ -134,7 +146,13 @@ const Footer = () => {
                         </ListItem>
                     </List>
                     <List>
-                        <ListItem sx={{ fontSize: '1.3em', fontWeight: 800 }}>
+                        <ListItem
+                            sx={{
+                                fontSize: '1.3em',
+                                fontWeight: 800,
+                                color: 'white',
+                            }}
+                        >
                             {' '}
                             Социальные сети
                         </ListItem>
@@ -156,7 +174,13 @@ const Footer = () => {
                         </ListItem>
                     </List>
                     <List>
-                        <ListItem sx={{ fontSize: '1.3em', fontWeight: 800 }}>
+                        <ListItem
+                            sx={{
+                                fontSize: '1.3em',
+                                fontWeight: 800,
+                                color: 'white',
+                            }}
+                        >
                             IMBA.SHOP
                         </ListItem>
                         {imbashop.map((item) => (
