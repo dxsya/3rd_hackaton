@@ -46,7 +46,6 @@ const pages = [
         link: '/products',
     },
 ];
-console.log(pages.map((page) => page.name));
 const Footer = () => {
     const navigate = useNavigate();
     return (
@@ -70,8 +69,9 @@ const Footer = () => {
                         fontWeight: 500,
                     }}
                 >
-                    {pages.map((page) => (
+                    {pages.map((page, index) => (
                         <ListItem
+                            key={index}
                             onClick={() => navigate(page.link)}
                             sx={{ cursor: 'pointer', justifyContent: 'center' }}
                         >

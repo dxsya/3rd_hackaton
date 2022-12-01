@@ -254,7 +254,6 @@ const Cart = () => {
                             }}
                         >
                             <TextField
-                                blurOnSelect="mouse"
                                 placeholder="Введите промокод"
                                 sx={{ width: '40%', border: '1px solid #0c6' }}
                             />
