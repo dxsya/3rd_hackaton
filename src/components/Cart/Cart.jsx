@@ -72,7 +72,13 @@ const Cart = () => {
                             <Box
                                 key={index}
                                 sx={{
-                                    display: 'flex',
+                                    display: {
+                                        xs: 'block',
+                                        sm: 'flex',
+                                        md: 'flex',
+                                        lg: 'flex',
+                                        xl: 'flex',
+                                    },
                                     alignContent: 'center',
                                     alignItems: 'center',
                                     justifyContent: 'space-around',
@@ -106,7 +112,13 @@ const Cart = () => {
                                 <Box
                                     sx={{
                                         display: 'flex',
-                                        width: '50%',
+                                        width: {
+                                            xs: '90%',
+                                            sm: '50%',
+                                            md: '50%',
+                                            lg: '50%',
+                                            xl: '50%',
+                                        },
                                         justifyContent: 'space-between',
                                     }}
                                 >
@@ -121,7 +133,7 @@ const Cart = () => {
                                         }
                                         sx={{
                                             width: {
-                                                xs: '30%',
+                                                xs: '35%',
                                                 sm: '30%',
                                                 md: '25%',
                                                 lg: '25%',
@@ -166,6 +178,11 @@ const Cart = () => {
                                         </Typography>
                                     </Box>
                                     <Button
+                                        sx={{
+                                            padding: 0,
+                                            display: 'block',
+                                            width: '20px',
+                                        }}
                                         onClick={() =>
                                             deleteCartProduct(product.item.id)
                                         }
@@ -198,9 +215,16 @@ const Cart = () => {
                             </Typography>
                             <Box
                                 sx={{
-                                    display: 'flex',
+                                    display: {
+                                        xs: 'block',
+                                        sm: 'flex',
+                                        md: 'flex',
+                                        lg: 'flex',
+                                        xl: 'flex',
+                                    },
                                     m: 4,
                                     alignItems: 'center',
+                                    textAlign: 'center',
                                 }}
                             >
                                 <Typography
