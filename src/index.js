@@ -1,21 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import AuthContextProvider from './contexts/AuthContextProvider';
-import CartContextProvider from './contexts/CartContextProvider';
-import ProductContextProvider from './contexts/ProductContextProvider';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import AuthContextProvider from "./contexts/AuthContextProvider";
+import BlogContextProvaider from "./contexts/BlogContextProvaider";
+import ProductContextProvider from "./contexts/ProductContextProvider";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <BrowserRouter>
-        <AuthContextProvider>
-            <ProductContextProvider>
-                <CartContextProvider>
+        <BlogContextProvaider>
+            <AuthContextProvider>
+                <ProductContextProvider>
                     <App />
-                </CartContextProvider>
-            </ProductContextProvider>
-        </AuthContextProvider>
+                </ProductContextProvider>
+            </AuthContextProvider>
+        </BlogContextProvaider>
     </BrowserRouter>
 );

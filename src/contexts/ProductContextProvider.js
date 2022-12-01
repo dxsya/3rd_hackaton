@@ -1,6 +1,6 @@
-import axios from 'axios';
-import React, { createContext, useContext, useReducer } from 'react';
-import { ACTIONS_PRODUCTS, JSON_API_PRODUCTS } from '../helpers/consts';
+import axios from "axios";
+import React, { createContext, useContext, useReducer } from "react";
+import { ACTIONS_PRODUCTS, JSON_API_PRODUCTS } from "../helpers/consts";
 
 export const productContext = createContext();
 
@@ -69,7 +69,7 @@ const ProductContextProvider = ({ children }) => {
     };
     return (
         <productContext.Provider value={values}>
-            {' '}
+            {" "}
             {children}
         </productContext.Provider>
     );

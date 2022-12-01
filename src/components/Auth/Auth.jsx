@@ -41,19 +41,22 @@ export default function Auth() {
     };
 
     return (
-        <Box className="auth">
+        <Box
+            className="auth"
+            sx={{
+                backgroundImage:
+                    "url(https://i.pinimg.com/474x/e4/09/1b/e4091be99b1887551063ec3f79b8a0a0.jpg)",
+            }}
+        >
             <ThemeProvider theme={theme}>
                 <Typography
                     sx={{
                         mt: 12,
                         fontSize: { xs: 30, sm: 40 },
                         fontWeight: 700,
-                        ml: {
-                            md: 15,
-                        },
+
                         textAlign: {
                             xs: "center",
-                            md: "left",
                         },
                     }}
                 >
@@ -61,48 +64,30 @@ export default function Auth() {
                 </Typography>
                 <Container component="main" maxWidth="lg">
                     <CssBaseline />
-                    <Box
-                        sx={{
-                            mb: 8,
-                            display: "flex",
-                            flexDirection: {
-                                xs: "column",
-                                md: "row",
-                            },
-                            justifyContent: {
-                                xs: "center",
-                                md: "space-around",
-                            },
-                            alignItems: {
-                                xs: "center",
-                                md: "flex-start",
-                            },
-                        }}
-                    >
+                    <Box>
                         <Box
                             sx={{
                                 mt: 3,
                                 display: "flex",
-                                flexDirection: "column",
-                                width: { xs: "90%", sm: "70%", md: "35%" },
+                                justifyContent: "center",
+                                width: { xs: "90%", sm: "100%" },
                             }}
                         >
-                            <Typography
-                                sx={{
-                                    fontWeight: 700,
-                                    fontSize: 26,
-                                }}
-                                component="h1"
-                                variant="h5"
-                            >
-                                Sign In
-                            </Typography>
                             <Box
                                 component="form"
                                 onSubmit={handleSubmit}
                                 noValidate
                                 sx={{ mt: 3 }}
                             >
+                                <Typography
+                                    sx={{
+                                        fontWeight: 700,
+                                        fontSize: 26,
+                                    }}
+                                    variant="h5"
+                                >
+                                    Sign In
+                                </Typography>
                                 <Typography
                                     sx={{
                                         fontWeight: 600,
@@ -195,7 +180,7 @@ export default function Auth() {
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        sx={{ mt: 3, mb: 2, fontWeight: 600 }}
+                                        sx={{ mt: 3, fontWeight: 600 }}
                                         onClick={() => {
                                             handleLogin();
                                             navigate("/");
@@ -209,7 +194,7 @@ export default function Auth() {
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        sx={{ mt: 3, mb: 2, fontWeight: 600 }}
+                                        sx={{ mt: 3, fontWeight: 600 }}
                                         onClick={handleSignup}
                                     >
                                         Register
@@ -262,7 +247,6 @@ export default function Auth() {
                             sx={{
                                 display: {
                                     xs: "none",
-                                    md: "block",
                                 },
                             }}
                             id="line"
