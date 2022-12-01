@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useCart } from '../../contexts/CartContextProvider';
 import { useProducts } from '../../contexts/ProductContextProvider';
+import Recomendations from '../Recomendantions/Recomendations';
 
 const ProductDetails = () => {
     const { productDetails, getProductDetails, deleteProduct } = useProducts();
@@ -14,55 +15,94 @@ const ProductDetails = () => {
     }, []);
     return (
         <div>
-            <Box>
-                <Typography>{productDetails.title}</Typography>
-                <Typography>{productDetails.picture}</Typography>
-                <Typography>{productDetails.price}</Typography>
-                <Typography>{productDetails.description}</Typography>
-                <Typography>{productDetails.type}</Typography>
-                <Button
-                    onClick={() => {
-                        deleteProduct(id);
-                        navigate('/products');
+            <Box
+                sx={{
+                    m: 2,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+            >
+                <img src={productDetails.picture} alt="" width={'30%'} />
+
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        width: '50%',
+                        marginLeft: '5%',
                     }}
                 >
-                    Delete
-                </Button>
-                <Button onClick={() => navigate(`edit/${id}`)}>Edit</Button>
-                {checkProductInCart(productDetails.id) ? (
-                    <Button
-                        onClick={() => {
-                            addProductToCart(productDetails);
-                        }}
+                    <Typography sx={{ fontWeight: 600, fontSize: '30px' }}>
+                        {productDetails.title}
+                    </Typography>
+                    <Typography>{productDetails.type}</Typography>
+                    <Typography>{productDetails.anime}</Typography>
+
+                    <Typography
+                        sx={{ fontSize: '30px', color: 'red', fontWeight: 800 }}
+                    >
+                        {productDetails.price}р
+                    </Typography>
+                    <Typography
                         sx={{
-                            width: '30%',
-                            backgroundColor: '#01cc65',
-                            padding: '8px',
-                            fontSize: '18px',
-                            color: 'white',
-                            fontWeight: 600,
-                            mt: 2,
+                            fontSize: '20px',
+                            color: 'gray',
+                            fontWeight: 800,
                         }}
                     >
-                        in cart
-                    </Button>
-                ) : (
-                    <Button
-                        onClick={() => addProductToCart(productDetails)}
-                        sx={{
-                            width: '30%',
-                            backgroundColor: '#01cc65',
-                            padding: '8px',
-                            fontSize: '18px',
-                            color: 'white',
-                            fontWeight: 600,
-                            mt: 2,
-                        }}
-                    >
-                        add to cart
-                    </Button>
-                )}
+                        <s>{Math.floor(productDetails.price * 1.4)}р</s>
+                    </Typography>
+                    <Typography>{productDetails.description}</Typography>
+                    {checkProductInCart(productDetails.id) ? (
+                        <Button
+                            onClick={() => {
+                                addProductToCart(productDetails);
+                            }}
+                            sx={{
+                                width: '40%',
+                                backgroundColor: '#01cc65',
+                                padding: '8px',
+                                fontSize: '18px',
+                                color: 'white',
+                                fontWeight: 600,
+                                mt: 2,
+                            }}
+                        >
+                            Убери из корзины
+                        </Button>
+                    ) : (
+                        <Button
+                            onClick={() => addProductToCart(productDetails)}
+                            sx={{
+                                width: '40%',
+                                backgroundColor: '#01cc65',
+                                padding: '8px',
+                                fontSize: '18px',
+                                color: 'white',
+                                fontWeight: 600,
+                                mt: 2,
+                            }}
+                        >
+                            добавь в корзину
+                        </Button>
+                    )}
+                    <Box>
+                        <Button
+                            onClick={() => {
+                                deleteProduct(id);
+                                navigate('/products');
+                            }}
+                        >
+                            Delete
+                        </Button>
+                        <Button onClick={() => navigate(`edit/${id}`)}>
+                            Edit
+                        </Button>
+                    </Box>
+                </Box>
             </Box>
+            <Recomendations />
         </div>
     );
 };
