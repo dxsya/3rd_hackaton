@@ -43,6 +43,7 @@ const ProductCard = ({ item }) => {
                         flexDirection: 'column',
                         alignContent: 'center',
                         alignItems: 'center',
+                        cursor: 'pointer',
                     }}
                 >
                     <img src={item.picture} alt={item.title} width={'70%'} />
@@ -54,6 +55,7 @@ const ProductCard = ({ item }) => {
                             width: '80%',
                             height: '50px',
                             textAlign: 'center',
+                            cursor: 'pointer',
                         }}
                     >
                         {titleShow(item)}

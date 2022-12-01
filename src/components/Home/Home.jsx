@@ -1,6 +1,6 @@
 import React from 'react';
 import { useProducts } from '../../contexts/ProductContextProvider';
-import Recomendations from '../Recomendations/Recomendations';
+import Recomendations from '../Recomendantions/Recomendations';
 
 const Home = () => {
     return (
