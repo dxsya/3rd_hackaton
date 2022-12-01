@@ -19,18 +19,48 @@ const ProductList = () => {
             {' '}
             <Box
                 sx={{
-                    backgroundImage: `url(https://static.insales-cdn.com/assets/1/762/3212026/1669721932/shopbg-mid.jpg)`,
-                    height: '400px',
-                    backgroundSize: 'cover',
+                    backgroundImage: {
+                        xs: `url(https://static.insales-cdn.com/assets/1/2446/3221902/1669823558/shopbg-mob.jpg)`,
+                        sm: `url(https://static.insales-cdn.com/assets/1/2446/3221902/1669823558/shopbg-mob.jpg)`,
+                        md: `url(https://static.insales-cdn.com/assets/1/2446/3221902/1669823558/shopbg.jpg)`,
+                        lg: `url(https://static.insales-cdn.com/assets/1/2446/3221902/1669823558/shopbg.jpg)`,
+                        xl: `url(https://static.insales-cdn.com/assets/1/2446/3221902/1669823558/shopbg.jpg)`,
+                    },
+                    height: {
+                        xs: '500px',
+                        sm: '500px',
+                        md: '250px',
+                        lg: '250px',
+                        xl: '250px',
+                    },
+                    backgroundSize: '100% 100%',
                 }}
             >
                 {' '}
             </Box>
-            <Box sx={{ m: 5 }}>
+            <Box
+                sx={{
+                    m: 5,
+                    display: {
+                        xs: 'flex',
+                        sm: 'block',
+                        md: 'block',
+                        lg: 'block',
+                        xl: 'block',
+                    },
+                    flexDirection: { xs: 'column' },
+                }}
+            >
                 <Button
                     sx={{
                         margin: '5px',
-                        width: '15%',
+                        width: {
+                            xs: '80%',
+                            sm: '23%',
+                            md: '20%',
+                            lg: '15%',
+                            xl: '15%',
+                        },
                         backgroundColor: '#eff0f1',
                         borderRadius: '3px',
                         fontSize: '12px',
@@ -43,7 +73,13 @@ const ProductList = () => {
                 <Button
                     sx={{
                         margin: '5px',
-                        width: '15%',
+                        width: {
+                            xs: '80%',
+                            sm: '23%',
+                            md: '20%',
+                            lg: '15%',
+                            xl: '15%',
+                        },
                         backgroundColor: '#eff0f1',
                         borderRadius: '3px',
                         fontSize: '12px',
@@ -56,7 +92,13 @@ const ProductList = () => {
                 <Button
                     sx={{
                         margin: '5px',
-                        width: '15%',
+                        width: {
+                            xs: '80%',
+                            sm: '23%',
+                            md: '20%',
+                            lg: '15%',
+                            xl: '15%',
+                        },
                         backgroundColor: '#eff0f1',
                         borderRadius: '3px',
                         fontSize: '12px',
@@ -69,7 +111,13 @@ const ProductList = () => {
                 <Button
                     sx={{
                         margin: '5px',
-                        width: '15%',
+                        width: {
+                            xs: '80%',
+                            sm: '23%',
+                            md: '20%',
+                            lg: '15%',
+                            xl: '15%',
+                        },
                         backgroundColor: '#eff0f1',
                         borderRadius: '3px',
                         fontSize: '12px',
@@ -87,7 +135,13 @@ const ProductList = () => {
                     background:
                         'url(https://static.insales-cdn.com/assets/1/762/3212026/1669721932/collection-bg.png) bottom center no-repeat',
                     height: '220px',
-                    display: 'flex',
+                    display: {
+                        xs: 'none',
+                        sm: 'none',
+                        md: 'flex',
+                        lg: 'flex',
+                        xl: 'flex',
+                    },
                     alignItems: 'center',
                     justifyContent: 'space-around',
                     mt: '8%',

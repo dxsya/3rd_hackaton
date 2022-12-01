@@ -1,17 +1,19 @@
 import { Box, Typography } from '@mui/material';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useProducts } from '../../contexts/ProductContextProvider';
 import { getRandomProducts } from '../../helpers/functions';
 import ProductCard from '../ProductList/ProductCard';
 
 const Recomendations = () => {
+    const [random, setRandom] = useState(0);
+
     const { products, getProducts } = useProducts();
 
     useEffect(() => {
         getProducts();
+        const rand = getRandomProducts(products.length);
+        setRandom(rand);
     }, []);
-
-    const rand = getRandomProducts(products.length);
 
     return (
         <Box
@@ -38,7 +40,7 @@ const Recomendations = () => {
                     justifyContent: 'space-around',
                 }}
             >
-                {products.slice(rand[0], rand[1]).map((item) => (
+                {products.slice(random[0], random[1]).map((item) => (
                     <ProductCard key={item.id} item={item} />
                 ))}
             </Box>

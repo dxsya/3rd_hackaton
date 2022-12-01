@@ -1,16 +1,32 @@
-
 import { Badge, List, ListItem } from '@mui/material';
-import { Box } from '@mui/system';
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import StarOutlineOutlinedIcon from '@mui/icons-material/StarOutlineOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import { useCart } from '../../contexts/CartContextProvider';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import { useLocation, useNavigate } from 'react-router-dom';
 
+const pages = [
+    { name: 'Магазин', link: '/products' },
+    { name: 'Добавить', link: '/addProduct' },
+    { name: 'Блоги', link: '/blogs' },
+    { name: 'О нас', link: '/aboutUs' },
+];
 
+function ResponsiveAppBar() {
+    const location = useLocation();
 
-const Navbar = () => {
     const { cart } = useCart();
     function productCount(cart) {
         let total = 0;
@@ -19,84 +35,194 @@ const Navbar = () => {
         });
         return total;
     }
-    const navigate = useNavigate();
-    return (
-        <>
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-            <List
-                sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    backgroundColor: 'white',
-                    boxShadow: '1px 1px 5px 0px rgba(0,0,0,0.61)',
-                }}
-            >
-                <ListItem sx={{ width: '10%' }}>
-                    {' '}
-                    <img
-                        src="https://static.insales-cdn.com/assets/1/762/3212026/1669721932/logo.png"
-                        alt="logo"
-                        onClick={() => navigate('/')}
-                    />
-                </ListItem>
-                <Box
-                    sx={{
-                        display: 'flex',
-                        width: '40%',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <ListItem
-                        onClick={() => navigate('/addProduct')}
-                        sx={{ padding: '1% 0', justifyContent: 'center' }}
-                    >
-                        Add product
-                    </ListItem>
-                    <ListItem
-                        sx={{ padding: '1% 0', justifyContent: 'center' }}
-                        onClick={() => navigate('/products')}
-                    >
-                        магазин
-                    </ListItem>
-                    <ListItem
-                        sx={{ padding: '1% 0', justifyContent: 'center' }}
-                    >
-                        оплата
-                    </ListItem>
-                    <ListItem
-                        sx={{ padding: '1% 0', justifyContent: 'center' }}
-                    >
-                        блоги
-                    </ListItem>
-                    <ListItem
-                        sx={{ padding: '1% 0', justifyContent: 'center' }}
-                    >
-                        что-то
-                    </ListItem>
-                </Box>
-                <Box sx={{ display: 'flex' }}>
-                    <ListItem>
-                        <StarOutlineOutlinedIcon />
-                    </ListItem>
-                    <ListItem
-                        onClick={() => {
-                            navigate('/cart');
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+    const handleOpenUserMenu = (event) => {
+        setAnchorElUser(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
+
+    const navigate = useNavigate();
+
+    return (
+        <AppBar position="static" sx={{ backgroundColor: 'white' }}>
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
+                    <Box
+                        sx={{
+                            width: '10%',
+                            ml: 10,
+                            display: { xs: 'none', md: 'flex' },
+                            mr: 1,
                         }}
                     >
-                        <Badge
-                            badgeContent={productCount(cart)}
-                            color="success"
-                        >
-                            <ShoppingCartOutlinedIcon />
-                        </Badge>
-                    </ListItem>
-                    <ListItem onClick={() => navigate('/auth')}>
-                        <PersonOutlineOutlinedIcon />
-                    </ListItem>
-                </Box>
-            </List>
-        </>
-    );
-};
+                        {' '}
+                        <img
+                            src="https://static.insales-cdn.com/assets/1/762/3212026/1669721932/logo.png"
+                            alt="logo"
+                            onClick={() => navigate('/')}
+                        />
+                    </Box>
 
-export default Navbar;
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            display: { xs: 'flex', md: 'none' },
+                        }}
+                    >
+                        <IconButton
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            sx={{ color: 'black' }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{
+                                display: { xs: 'block', md: 'none' },
+                            }}
+                        >
+                            {pages.map((page) => (
+                                <MenuItem
+                                    key={page.name}
+                                    onClick={() => {
+                                        handleCloseNavMenu();
+                                        navigate(page.link);
+                                    }}
+                                >
+                                    <Typography textAlign="center">
+                                        {page.name}
+                                    </Typography>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Box>
+
+                    <Box
+                        sx={{
+                            ml: 10,
+                            display: { xs: 'flex', md: 'none' },
+                            mr: 1,
+                            width: '30%',
+                        }}
+                    >
+                        {' '}
+                        <img
+                            src="https://static.insales-cdn.com/assets/1/762/3212026/1669721932/logo.png"
+                            alt="logo"
+                            onClick={() => navigate('/')}
+                        />
+                    </Box>
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            display: { xs: 'none', md: 'flex' },
+                        }}
+                    >
+                        {pages.map((page) =>
+                            location.pathname === page.link ? (
+                                <Button
+                                    key={page.name}
+                                    onClick={() => {
+                                        handleCloseNavMenu();
+                                        navigate(page.link);
+                                    }}
+                                    sx={{
+                                        my: 2,
+                                        color: 'black',
+                                        display: 'block',
+                                        backgroundColor: '#e5e5e5',
+                                    }}
+                                >
+                                    {page.name}
+                                </Button>
+                            ) : (
+                                <Button
+                                    key={page.name}
+                                    onClick={() => {
+                                        handleCloseNavMenu();
+                                        navigate(page.link);
+                                    }}
+                                    sx={{
+                                        my: 2,
+                                        color: 'black',
+                                        display: 'block',
+                                    }}
+                                >
+                                    {page.name}
+                                </Button>
+                            )
+                        )}
+                    </Box>
+
+                    <Box sx={{ display: 'flex' }}>
+                        <ListItem
+                            sx={{
+                                padding: {
+                                    xs: '0 2px',
+                                },
+                            }}
+                        >
+                            <StarOutlineOutlinedIcon sx={{ color: 'black' }} />
+                        </ListItem>
+                        <ListItem
+                            onClick={() => {
+                                navigate('/cart');
+                            }}
+                            sx={{
+                                padding: {
+                                    xs: '0 2px',
+                                },
+                            }}
+                        >
+                            <Badge
+                                badgeContent={productCount(cart)}
+                                color="error"
+                            >
+                                <ShoppingCartOutlinedIcon
+                                    sx={{ color: 'black' }}
+                                />
+                            </Badge>
+                        </ListItem>
+                        <ListItem
+                            sx={{
+                                padding: {
+                                    xs: '0 2px',
+                                },
+                            }}
+                            onClick={() => navigate('/auth')}
+                        >
+                            <PersonOutlineOutlinedIcon
+                                sx={{ color: 'black' }}
+                            />
+                        </ListItem>
+                    </Box>
+                </Toolbar>
+            </Container>
+        </AppBar>
+    );
+}
+export default ResponsiveAppBar;
