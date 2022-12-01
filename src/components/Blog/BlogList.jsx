@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect } from "react";
 import { useBlog } from "../../contexts/BlogContextProvaider";
@@ -12,7 +13,25 @@ const BlogList = () => {
 
     return (
         <>
-            <Box sx={{ display: "flex" }}>
+            <Typography
+                variant="h3"
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    fontWeight: "900",
+                    mt: "3%",
+                }}
+            >
+                Блог Imba Shop
+            </Typography>
+
+            <Box
+                sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "space-evenly",
+                }}
+            >
                 {blogs.map((item) => (
                     <BlogCard key={item.id} item={item} />
                 ))}
