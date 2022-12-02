@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useBlog } from "../../contexts/BlogContextProvaider";
 import BlogCard from "./BlogCard";
 import Pagination from "@mui/material/Pagination";
@@ -8,6 +8,7 @@ import Stack from "@mui/material/Stack";
 
 const BlogList = () => {
     const { blogs, getBlog } = useBlog();
+    const { count, setCount } = useState();
 
     useEffect(() => {
         getBlog();
