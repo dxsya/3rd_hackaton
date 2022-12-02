@@ -1,27 +1,27 @@
-import { Badge, List, ListItem } from '@mui/material';
+import { Badge, List, ListItem } from "@mui/material";
 
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import StarOutlineOutlinedIcon from '@mui/icons-material/StarOutlineOutlined';
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
-import { useCart } from '../../contexts/CartContextProvider';
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-import { useLocation, useNavigate } from 'react-router-dom';
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import { useCart } from "../../contexts/CartContextProvider";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const pages = [
-    { name: 'Магазин', link: '/products' },
-    { name: 'Добавить', link: '/addProduct' },
-    { name: 'Блог', link: '/blog' },
-    { name: 'О нас', link: '/aboutUs' },
+    { name: "Магазин", link: "/products" },
+    { name: "Добавить", link: "/addProduct" },
+    { name: "Блоги", link: "/blog" },
+    { name: "О нас", link: "/aboutUs" },
 ];
 
 function ResponsiveAppBar() {
@@ -52,29 +52,29 @@ function ResponsiveAppBar() {
     const navigate = useNavigate();
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: 'white' }}>
+        <AppBar position="static" sx={{ backgroundColor: "white" }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box
                         sx={{
-                            width: '10%',
+                            width: "10%",
                             ml: 10,
-                            display: { xs: 'none', md: 'flex' },
+                            display: { xs: "none", md: "flex" },
                             mr: 1,
                         }}
                     >
-                        {' '}
+                        {" "}
                         <img
                             src="https://static.insales-cdn.com/assets/1/762/3212026/1669721932/logo.png"
                             alt="logo"
-                            onClick={() => navigate('/')}
+                            onClick={() => navigate("/")}
                         />
                     </Box>
 
                     <Box
                         sx={{
                             flexGrow: 1,
-                            display: { xs: 'flex', md: 'none' },
+                            display: { xs: "flex", md: "none" },
                         }}
                     >
                         <IconButton
@@ -83,7 +83,7 @@ function ResponsiveAppBar() {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            sx={{ color: 'black' }}
+                            sx={{ color: "black" }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -91,18 +91,18 @@ function ResponsiveAppBar() {
                             id="menu-appbar"
                             anchorEl={anchorElNav}
                             anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
+                                vertical: "bottom",
+                                horizontal: "left",
                             }}
                             keepMounted
                             transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
+                                vertical: "top",
+                                horizontal: "left",
                             }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none' },
+                                display: { xs: "block", md: "none" },
                             }}
                         >
                             {pages.map((page) => (
@@ -124,22 +124,22 @@ function ResponsiveAppBar() {
                     <Box
                         sx={{
                             ml: 10,
-                            display: { xs: 'flex', md: 'none' },
+                            display: { xs: "flex", md: "none" },
                             mr: 1,
-                            width: '30%',
+                            width: "30%",
                         }}
                     >
-                        {' '}
+                        {" "}
                         <img
                             src="https://static.insales-cdn.com/assets/1/762/3212026/1669721932/logo.png"
                             alt="logo"
-                            onClick={() => navigate('/')}
+                            onClick={() => navigate("/")}
                         />
                     </Box>
                     <Box
                         sx={{
                             flexGrow: 1,
-                            display: { xs: 'none', md: 'flex' },
+                            display: { xs: "none", md: "flex" },
                         }}
                     >
                         {pages.map((page) =>
@@ -152,9 +152,9 @@ function ResponsiveAppBar() {
                                     }}
                                     sx={{
                                         my: 2,
-                                        color: 'black',
-                                        display: 'block',
-                                        backgroundColor: '#e5e5e5',
+                                        color: "black",
+                                        display: "block",
+                                        backgroundColor: "#e5e5e5",
                                     }}
                                 >
                                     {page.name}
@@ -168,8 +168,8 @@ function ResponsiveAppBar() {
                                     }}
                                     sx={{
                                         my: 2,
-                                        color: 'black',
-                                        display: 'block',
+                                        color: "black",
+                                        display: "block",
                                     }}
                                 >
                                     {page.name}
@@ -178,31 +178,31 @@ function ResponsiveAppBar() {
                         )}
                     </Box>
 
-                    <Box sx={{ display: 'flex' }}>
+                    <Box sx={{ display: "flex" }}>
                         <ListItem
                             sx={{
                                 padding: {
-                                    xs: '0 2px',
-                                    sm: '0 4px',
-                                    md: '0 8px',
-                                    lg: '0 12px',
-                                    xl: '0 14px',
+                                    xs: "0 2px",
+                                    sm: "0 4px",
+                                    md: "0 8px",
+                                    lg: "0 12px",
+                                    xl: "0 14px",
                                 },
                             }}
                         >
-                            <StarOutlineOutlinedIcon sx={{ color: 'black' }} />
+                            <StarOutlineOutlinedIcon sx={{ color: "black" }} />
                         </ListItem>
                         <ListItem
                             onClick={() => {
-                                navigate('/cart');
+                                navigate("/cart");
                             }}
                             sx={{
                                 padding: {
-                                    xs: '0 2px',
-                                    sm: '0 4px',
-                                    md: '0 8px',
-                                    lg: '0 12px',
-                                    xl: '0 14px',
+                                    xs: "0 2px",
+                                    sm: "0 4px",
+                                    md: "0 8px",
+                                    lg: "0 12px",
+                                    xl: "0 14px",
                                 },
                             }}
                         >
@@ -211,24 +211,24 @@ function ResponsiveAppBar() {
                                 color="error"
                             >
                                 <ShoppingCartOutlinedIcon
-                                    sx={{ color: 'black' }}
+                                    sx={{ color: "black" }}
                                 />
                             </Badge>
                         </ListItem>
                         <ListItem
                             sx={{
                                 padding: {
-                                    xs: '0 2px',
-                                    sm: '0 4px',
-                                    md: '0 8px',
-                                    lg: '0 12px',
-                                    xl: '0 14px',
+                                    xs: "0 2px",
+                                    sm: "0 4px",
+                                    md: "0 8px",
+                                    lg: "0 12px",
+                                    xl: "0 14px",
                                 },
                             }}
-                            onClick={() => navigate('/auth')}
+                            onClick={() => navigate("/auth")}
                         >
                             <PersonOutlineOutlinedIcon
-                                sx={{ color: 'black' }}
+                                sx={{ color: "black" }}
                             />
                         </ListItem>
                     </Box>
