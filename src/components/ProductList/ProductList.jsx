@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material';
+import { Button, Input, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react';
 import { useProducts } from '../../contexts/ProductContextProvider';
@@ -26,7 +26,10 @@ const ProductList = () => {
         return products.slice(begin, end);
     }
     const location = useLocation();
-    console.log(location);
+
+    useEffect(() => {
+        getProducts();
+    }, [location.search]);
 
     return (
         <>
@@ -264,7 +267,8 @@ const ProductList = () => {
                         </Button>
                     </>
                 )}
-                {location.search.includes('asc') ? (
+                {location.search.includes('asc') &&
+                location.search.includes('_sort') ? (
                     <>
                         {' '}
                         <Button
@@ -284,7 +288,12 @@ const ProductList = () => {
                                 color: 'black',
                             }}
                             onClick={() => {
-                                if (location.search.includes('_sort')) {
+                                if (
+                                    location.search.includes('_sort') &&
+                                    location.search.includes('desc')
+                                ) {
+                                    fetchByParams('_order', 'asc');
+                                } else if (location.search.includes('_sort')) {
                                     fetchByParams('_sort', '');
                                 } else {
                                     fetchByParams('_sort', 'asc');
@@ -314,7 +323,12 @@ const ProductList = () => {
                                 color: 'black',
                             }}
                             onClick={() => {
-                                if (location.search.includes('_sort')) {
+                                if (
+                                    location.search.includes('_sort') &&
+                                    location.search.includes('desc')
+                                ) {
+                                    fetchByParams('_order', 'asc');
+                                } else if (location.search.includes('_sort')) {
                                     fetchByParams('_sort', '');
                                 } else {
                                     fetchByParams('_sort', 'asc');
@@ -325,7 +339,8 @@ const ProductList = () => {
                         </Button>
                     </>
                 )}
-                {location.search.includes('desc') ? (
+                {location.search.includes('desc') &&
+                location.search.includes('_sort') ? (
                     <>
                         {' '}
                         <Button
@@ -345,7 +360,12 @@ const ProductList = () => {
                                 color: 'black',
                             }}
                             onClick={() => {
-                                if (location.search.includes('_sort')) {
+                                if (
+                                    location.search.includes('_sort') &&
+                                    location.search.includes('asc')
+                                ) {
+                                    fetchByParams('_order', 'desc');
+                                } else if (location.search.includes('_sort')) {
                                     fetchByParams('_sort', '');
                                 } else {
                                     fetchByParams('_sort', 'desc');
@@ -375,7 +395,12 @@ const ProductList = () => {
                                 color: 'black',
                             }}
                             onClick={() => {
-                                if (location.search.includes('_sort')) {
+                                if (
+                                    location.search.includes('_sort') &&
+                                    location.search.includes('asc')
+                                ) {
+                                    fetchByParams('_order', 'desc');
+                                } else if (location.search.includes('_sort')) {
                                     fetchByParams('_sort', '');
                                 } else {
                                     fetchByParams('_sort', 'desc');
@@ -438,6 +463,9 @@ const ProductList = () => {
                         width={'100%'}
                     />
                 </Box>
+            </Box>
+            <Box sx={{ width: '85%', margin: '0 auto' }}>
+                <Input />
             </Box>
             <Box
                 sx={{
