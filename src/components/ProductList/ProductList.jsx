@@ -5,7 +5,7 @@ import { useProducts } from '../../contexts/ProductContextProvider';
 import ProductCard from './ProductCard';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import ProductPagination from './ProductPagination';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 
 const ProductList = () => {
     const { products, getProducts, fetchByParams } = useProducts();
@@ -30,6 +30,15 @@ const ProductList = () => {
     useEffect(() => {
         getProducts();
     }, [location.search]);
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [search, setSearch] = useState(searchParams.get('q') || '');
+
+    useEffect(() => {
+        setSearchParams({
+            q: search,
+        });
+    }, [search]);
 
     return (
         <>
@@ -464,8 +473,13 @@ const ProductList = () => {
                     />
                 </Box>
             </Box>
-            <Box sx={{ width: '85%', margin: '0 auto' }}>
-                <Input />
+            <Box sx={{ width: '83%', margin: '40px auto 0 auto' }}>
+                <Input
+                    placeholder="Поиск"
+                    sx={{ width: '20%', padding: 1 }}
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
             </Box>
             <Box
                 sx={{
