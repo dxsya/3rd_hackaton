@@ -45,14 +45,11 @@ export default function Auth() {
                 <Typography
                     sx={{
                         padding: "3%",
-                        fontSize: { xs: 30, sm: 40 },
-                        fontWeight: 700,
-                        textAlign: {
-                            xs: "center",
-                        },
+                        fontSize: "40px",
+                        fontWeight: 600,
                     }}
                 >
-                    YOUR ACCOUNT
+                    Вход в кабинет покупателя
                 </Typography>
                 <Container component="main" maxWidth="lg">
                     <CssBaseline />
@@ -60,9 +57,10 @@ export default function Auth() {
                         <Box
                             sx={{
                                 mt: 3,
-                                display: "flex",
-                                justifyContent: "center",
-                                width: { xs: "90%", sm: "100%" },
+                                width: "50%",
+                                // display: "flex",
+                                // justifyContent: "center",
+                                // width: { xs: "90%", sm: "100%" },
                             }}
                         >
                             <Box
@@ -78,7 +76,7 @@ export default function Auth() {
                                     }}
                                     variant="h5"
                                 >
-                                    Sign In
+                                    Вход
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -108,7 +106,7 @@ export default function Auth() {
                                     <Typography
                                         sx={{ fontWeight: 600, fontSize: 14 }}
                                     >
-                                        Password
+                                        Пароль
                                     </Typography>
                                     <TextField
                                         className="input-password"
@@ -151,7 +149,7 @@ export default function Auth() {
                                             Remember me
                                         </Typography>
                                     </Box>
-                                    <Link
+                                    {/* <Link
                                         className="links"
                                         sx={{
                                             mt: 1,
@@ -164,7 +162,7 @@ export default function Auth() {
                                         color="primary"
                                     >
                                         Forgot password?
-                                    </Link>
+                                    </Link> */}
                                 </Box>
                                 {hasAccount ? (
                                     <Button
