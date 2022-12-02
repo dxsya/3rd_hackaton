@@ -11,7 +11,6 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { useNavigate } from "react-router-dom";
-// import "./Auth.css";
 // import AuthRightForm from "./AuthRightForm";
 
 const theme = createTheme();
@@ -45,10 +44,9 @@ export default function Auth() {
             <ThemeProvider theme={theme}>
                 <Typography
                     sx={{
-                        mt: 12,
+                        padding: "3%",
                         fontSize: { xs: 30, sm: 40 },
                         fontWeight: 700,
-
                         textAlign: {
                             xs: "center",
                         },
