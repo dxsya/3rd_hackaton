@@ -41,6 +41,7 @@ const ProductContextProvider = ({ children }) => {
             type: ACTIONS_PRODUCTS.GET_PRODUCTS,
             payload: data,
         });
+        return data;
     }
 
     async function getProductDetails(id) {

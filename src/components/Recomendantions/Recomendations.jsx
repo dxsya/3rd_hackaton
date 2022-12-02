@@ -5,14 +5,14 @@ import { getRandomProducts } from '../../helpers/functions';
 import ProductCard from '../ProductList/ProductCard';
 
 const Recomendations = () => {
-    const [random, setRandom] = useState(0);
-
     const { products, getProducts } = useProducts();
 
+    const [random, setRandom] = useState(0);
     useEffect(() => {
-        getProducts();
-        const rand = getRandomProducts(products.length);
-        setRandom(rand);
+        getProducts().then((data) => {
+            let rand = getRandomProducts(data.length);
+            setRandom(rand);
+        });
     }, []);
 
     return (

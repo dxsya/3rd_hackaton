@@ -22,6 +22,7 @@ const AddProduct = () => {
         picture: '',
         type: '',
         anime: false,
+        comment: [],
     });
 
     const handleInput = (e) => {
@@ -93,7 +94,7 @@ const AddProduct = () => {
                     <Button
                         onClick={() => {
                             addProduct(product);
-                            // navigate('/products');
+                            navigate('/products');
                         }}
                         variant="outlined"
                         sx={{ margin: '1%' }}

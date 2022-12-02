@@ -1,16 +1,16 @@
-import * as React from "react";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useAuth } from "../../contexts/AuthContextProvider";
-import { useNavigate } from "react-router-dom";
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import TextField from '@mui/material/TextField';
+import Checkbox from '@mui/material/Checkbox';
+import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useAuth } from '../../contexts/AuthContextProvider';
+import { useNavigate } from 'react-router-dom';
 // import AuthRightForm from "./AuthRightForm";
 
 const theme = createTheme();
@@ -34,30 +34,29 @@ export default function Auth() {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         console.log({
-            email: data.get("email"),
-            password: data.get("password"),
+            email: data.get('email'),
+            password: data.get('password'),
         });
     };
 
     return (
         <Box>
             <ThemeProvider theme={theme}>
-                <Typography
-                    sx={{
-                        padding: "3%",
-                        fontSize: "40px",
-                        fontWeight: 600,
-                    }}
-                >
-                    Вход в кабинет покупателя
-                </Typography>
                 <Container component="main" maxWidth="lg">
-                    <CssBaseline />
                     <Box>
+                        <Typography
+                            sx={{
+                                mt: '5%',
+                                fontSize: '40px',
+                                fontWeight: 600,
+                            }}
+                        >
+                            Вход в кабинет покупателя
+                        </Typography>
                         <Box
                             sx={{
                                 mt: 3,
-                                width: "50%",
+                                width: '50%',
                                 // display: "flex",
                                 // justifyContent: "center",
                                 // width: { xs: "90%", sm: "100%" },
@@ -122,25 +121,25 @@ export default function Auth() {
                                         onChange={(e) => {
                                             setPassword(e.target.value);
                                         }}
-                                        sx={{ borderRadius: "0" }}
+                                        sx={{ borderRadius: '0' }}
                                     />
                                 </Box>
 
                                 <Box
                                     sx={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center',
                                     }}
                                 >
                                     <Box
                                         sx={{
-                                            display: "flex",
-                                            alignItems: "center",
+                                            display: 'flex',
+                                            alignItems: 'center',
                                             mt: 1,
                                         }}
                                     >
-                                        {" "}
+                                        {' '}
                                         <Checkbox
                                             value="remember"
                                             color="primary"
@@ -154,7 +153,7 @@ export default function Auth() {
                                         sx={{
                                             mt: 1,
                                             fontSize: 15,
-                                            color: "black",
+                                            color: 'black',
                                             fontSize: { xs: 14, sm: 16 },
                                         }}
                                         href="#"
@@ -173,7 +172,7 @@ export default function Auth() {
                                         sx={{ mt: 3, fontWeight: 600 }}
                                         onClick={() => {
                                             handleLogin();
-                                            navigate("/");
+                                            navigate('/');
                                         }}
                                     >
                                         Sign in
@@ -194,15 +193,15 @@ export default function Auth() {
                                 <Grid
                                     container
                                     sx={{
-                                        display: "flex",
-                                        justifyContent: "center",
+                                        display: 'flex',
+                                        justifyContent: 'center',
                                     }}
                                 >
                                     <Grid item>
                                         {hasAccount ? (
                                             <Link
                                                 className="links"
-                                                sx={{ color: "black" }}
+                                                sx={{ color: 'black' }}
                                                 href="#"
                                                 variant="body2"
                                                 onClick={() =>
@@ -216,7 +215,7 @@ export default function Auth() {
                                         ) : (
                                             <Link
                                                 className="links"
-                                                sx={{ color: "black" }}
+                                                sx={{ color: 'black' }}
                                                 href="#"
                                                 variant="body2"
                                                 onClick={() =>
@@ -224,7 +223,7 @@ export default function Auth() {
                                                 }
                                             >
                                                 {
-                                                    "Already have an account? Log In"
+                                                    'Already have an account? Log In'
                                                 }
                                             </Link>
                                         )}
@@ -236,14 +235,11 @@ export default function Auth() {
                         <Box
                             sx={{
                                 display: {
-                                    xs: "none",
+                                    xs: 'none',
                                 },
                             }}
                             id="line"
                         ></Box>
-
-                        {/* !===================================================================================================================================================================== */}
-                        {/* <AuthRightForm /> */}
                     </Box>
                 </Container>
             </ThemeProvider>

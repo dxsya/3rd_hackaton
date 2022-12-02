@@ -189,6 +189,7 @@ function ResponsiveAppBar() {
                                     xl: "0 14px",
                                 },
                             }}
+                            onClick={() => navigate('/wishlist')}
                         >
                             <StarOutlineOutlinedIcon sx={{ color: "black" }} />
                         </ListItem>
