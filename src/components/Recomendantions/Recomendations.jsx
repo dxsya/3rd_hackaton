@@ -30,6 +30,7 @@ const Recomendations = () => {
             >
                 РЕКОМЕНДУЕМ КУПИТЬ
             </Typography>
+
             <Box
                 sx={{
                     display: 'flex',
