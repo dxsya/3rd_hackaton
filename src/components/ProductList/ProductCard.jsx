@@ -2,6 +2,7 @@ import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../contexts/CartContextProvider';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
 const ProductCard = ({ item }) => {
     const { addProductToCart, checkProductInCart } = useCart();
