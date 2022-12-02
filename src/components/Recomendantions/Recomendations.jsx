@@ -7,11 +7,13 @@ import ProductCard from '../ProductList/ProductCard';
 const Recomendations = () => {
     const { products, getProducts } = useProducts();
 
+    const [random, setRandom] = useState(0);
     useEffect(() => {
-        getProducts();
+        getProducts().then((data) => {
+            let rand = getRandomProducts(data.length);
+            setRandom(rand);
+        });
     }, []);
-
-    let random = getRandomProducts(products.length);
 
     return (
         <Box

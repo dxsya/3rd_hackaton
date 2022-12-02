@@ -11,7 +11,6 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useAuth } from '../../contexts/AuthContextProvider';
 import { useNavigate } from 'react-router-dom';
-// import "./Auth.css";
 // import AuthRightForm from "./AuthRightForm";
 
 const theme = createTheme();
@@ -41,30 +40,26 @@ export default function Auth() {
     };
 
     return (
-        <Box className="auth">
+        <Box>
             <ThemeProvider theme={theme}>
-                <Typography
-                    sx={{
-                        mt: 12,
-                        fontSize: { xs: 30, sm: 40 },
-                        fontWeight: 700,
-
-                        textAlign: {
-                            xs: 'center',
-                        },
-                    }}
-                >
-                    YOUR ACCOUNT
-                </Typography>
                 <Container component="main" maxWidth="lg">
-                    <CssBaseline />
                     <Box>
+                        <Typography
+                            sx={{
+                                mt: '5%',
+                                fontSize: '40px',
+                                fontWeight: 600,
+                            }}
+                        >
+                            Вход в кабинет покупателя
+                        </Typography>
                         <Box
                             sx={{
                                 mt: 3,
-                                display: 'flex',
-                                justifyContent: 'center',
-                                width: { xs: '90%', sm: '100%' },
+                                width: '50%',
+                                // display: "flex",
+                                // justifyContent: "center",
+                                // width: { xs: "90%", sm: "100%" },
                             }}
                         >
                             <Box
@@ -80,7 +75,7 @@ export default function Auth() {
                                     }}
                                     variant="h5"
                                 >
-                                    Sign In
+                                    Вход
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -110,7 +105,7 @@ export default function Auth() {
                                     <Typography
                                         sx={{ fontWeight: 600, fontSize: 14 }}
                                     >
-                                        Password
+                                        Пароль
                                     </Typography>
                                     <TextField
                                         className="input-password"
@@ -153,7 +148,7 @@ export default function Auth() {
                                             Remember me
                                         </Typography>
                                     </Box>
-                                    <Link
+                                    {/* <Link
                                         className="links"
                                         sx={{
                                             mt: 1,
@@ -166,7 +161,7 @@ export default function Auth() {
                                         color="primary"
                                     >
                                         Forgot password?
-                                    </Link>
+                                    </Link> */}
                                 </Box>
                                 {hasAccount ? (
                                     <Button

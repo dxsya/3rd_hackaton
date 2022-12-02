@@ -1,18 +1,50 @@
-import { Box, Button, Typography } from '@mui/material';
-import React, { useEffect } from 'react';
+import { Box, Button, TextField, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useCart } from '../../contexts/CartContextProvider';
 import { useProducts } from '../../contexts/ProductContextProvider';
 import Recomendations from '../Recomendantions/Recomendations';
 
 const ProductDetails = () => {
-    const { productDetails, getProductDetails, deleteProduct } = useProducts();
-    const { addProductToCart, checkProductInCart } = useCart();
-    const { id } = useParams();
-    const navigate = useNavigate();
+    const {
+        productDetails,
+        getProductDetails,
+        deleteProduct,
+        saveEditedProduct,
+    } = useProducts();
     useEffect(() => {
         getProductDetails(id);
     }, []);
+
+    // console.log(productDetails);
+    const { addProductToCart, checkProductInCart } = useCart();
+    const { id } = useParams();
+    const navigate = useNavigate();
+
+    const [product, setProduct] = useState({ ...productDetails });
+    const [comment, setComment] = useState({});
+
+    const handleInput = (e) => {
+        let newComment = { comment: e.target.value };
+        setComment(newComment);
+    };
+    const handleClick = () => {
+        let obj = {
+            ...productDetails,
+        };
+        obj.comments.push(comment);
+        setProduct(obj);
+        saveEditedProduct(product, productDetails.id);
+    };
+    let com = [];
+    if (!productDetails.comments) {
+        com = [];
+    } else {
+        com = [...productDetails.comments];
+    }
+
+    if (!productDetails.comments) return;
+
     return (
         <div>
             <Box
@@ -37,7 +69,9 @@ const ProductDetails = () => {
                         {productDetails.title}
                     </Typography>
                     <Typography>{productDetails.type}</Typography>
-                    <Typography>{productDetails.anime}</Typography>
+                    <Typography>
+                        {JSON.stringify(productDetails.anime)}
+                    </Typography>
 
                     <Typography
                         sx={{ fontSize: '30px', color: 'red', fontWeight: 800 }}
@@ -54,6 +88,9 @@ const ProductDetails = () => {
                         <s>{Math.floor(productDetails.price * 1.4)}р</s>
                     </Typography>
                     <Typography>{productDetails.description}</Typography>
+                    {com.map((item) => (
+                        <Typography>{item.comment}</Typography>
+                    ))}
                     {checkProductInCart(productDetails.id) ? (
                         <Button
                             onClick={() => {
@@ -100,6 +137,12 @@ const ProductDetails = () => {
                             Edit
                         </Button>
                     </Box>
+                    <TextField
+                        onChange={handleInput}
+                        name="comments"
+                        inputProps={{ 'aria-label': 'controlled' }}
+                    />
+                    <Button onClick={() => handleClick()}>отзыв</Button>
                 </Box>
             </Box>
             <Recomendations />
