@@ -41,13 +41,7 @@ export default function Auth() {
     };
 
     return (
-        <Box
-            className="auth"
-            sx={{
-                backgroundImage:
-                    "url(https://i.pinimg.com/474x/e4/09/1b/e4091be99b1887551063ec3f79b8a0a0.jpg)",
-            }}
-        >
+        <Box>
             <ThemeProvider theme={theme}>
                 <Typography
                     sx={{

@@ -3,6 +3,8 @@ import { Box } from "@mui/system";
 import React, { useEffect } from "react";
 import { useBlog } from "../../contexts/BlogContextProvaider";
 import BlogCard from "./BlogCard";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 
 const BlogList = () => {
     const { blogs, getBlog } = useBlog();
@@ -24,6 +26,9 @@ const BlogList = () => {
             >
                 Блог Imba Shop
             </Typography>
+            <Stack spacing={2}>
+                <Pagination count={10} variant="outlined" shape="rounded" />
+            </Stack>
 
             <Box
                 sx={{
