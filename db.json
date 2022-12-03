@@ -13,6 +13,20 @@
         },
         {
           "comment": "dsfsdfsdfsdf"
+        },
+        {
+          "comment": "ya ego fanat"
+        },
+        {
+          "comment": "pushka"
+        },
+        {
+          "comment": "emae"
+        }
+      ],
+      "likes": [
+        {
+          "like": "Ofe8LFqEMzTB0lhL7BOU4fu7HGx1"
         }
       ],
       "id": 5
@@ -30,6 +44,17 @@
         },
         {
           "comment": "12312341241"
+        },
+        {
+          "comment": "lksdlkasd"
+        },
+        {
+          "comment": "lksdlkasdzxc"
+        }
+      ],
+      "likes": [
+        {
+          "like": "WDYK9IcDaQZhXW3NwdYGbhibiSk1"
         }
       ],
       "id": 6
@@ -41,7 +66,19 @@
       "picture": "https://static.insales-cdn.com/images/products/1/6640/591010288/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_1_%D1%82%D1%80%D0%BE%D0%BF%D0%B8%D0%BA_%D0%B0%D0%BD%D0%B8%D0%BC%D0%B5.jpg",
       "type": "energy",
       "anime": true,
-      "comments": [],
+      "comments": [
+        {
+          "comment": "aksjdnkas"
+        },
+        {
+          "comment": "mxzn cmnz"
+        }
+      ],
+      "likes": [
+        {
+          "like": "Ofe8LFqEMzTB0lhL7BOU4fu7HGx1"
+        }
+      ],
       "id": 7
     },
     {
@@ -61,7 +98,24 @@
       "picture": "https://static.insales-cdn.com/images/products/1/5241/579916921/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_1_%D0%BC%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0_%D0%B0%D0%BD%D0%B8%D0%BC%D0%B5.png",
       "type": "energy",
       "anime": true,
-      "comments": [],
+      "comments": [
+        {
+          "comment": "zxc"
+        },
+        {
+          "comment": "zxc123"
+        },
+        {
+          "comment": "zxc123sdkfjsdf"
+        },
+        {
+          "comment": "klass"
+        },
+        {
+          "comment": "5 star"
+        }
+      ],
+      "likes": [],
       "id": 9
     },
     {
@@ -71,7 +125,21 @@
       "picture": "https://static.insales-cdn.com/images/products/1/7557/619830661/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D1%84%D0%BE%D0%BA%D1%81.jpg",
       "type": "energy",
       "anime": false,
-      "comments": [],
+      "comments": [
+        {
+          "comment": "sweetie fox top"
+        },
+        {
+          "comment": "top pronstar"
+        },
+        {
+          "comment": "och vkusno"
+        },
+        {
+          "comment": "och vkusno"
+        }
+      ],
+      "likes": [],
       "id": 10
     },
     {
@@ -81,7 +149,15 @@
       "picture": "https://static.insales-cdn.com/images/products/1/6915/591035139/large_720x750_waifu__1____%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
       "type": "shaker",
       "anime": true,
-      "comments": [],
+      "comments": [
+        {
+          "comment": "zxcjas"
+        },
+        {
+          "comment": "zxcjas12321"
+        }
+      ],
+      "likes": [],
       "id": 11
     },
     {
@@ -91,7 +167,15 @@
       "picture": "https://static.insales-cdn.com/images/products/1/245/619815157/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D0%B1%D0%B5%D1%81.jpg",
       "type": "energy",
       "anime": false,
-      "comments": [],
+      "comments": [
+        {
+          "comment": "123 "
+        },
+        {
+          "comment": "ya ego fanat"
+        }
+      ],
+      "likes": [],
       "id": 12
     },
     {
@@ -102,6 +186,7 @@
       "type": "energy",
       "anime": false,
       "comments": [],
+      "likes": [],
       "id": 13
     },
     {
@@ -112,6 +197,7 @@
       "type": "shaker",
       "anime": true,
       "comments": [],
+      "likes": [],
       "id": 14
     },
     {
@@ -122,6 +208,7 @@
       "type": "energy",
       "anime": true,
       "comments": [],
+      "likes": [],
       "id": 15
     },
     {
@@ -132,6 +219,7 @@
       "type": "energy",
       "anime": false,
       "comments": [],
+      "likes": [],
       "id": 16
     },
     {
@@ -142,6 +230,7 @@
       "type": "energy",
       "anime": true,
       "comments": [],
+      "likes": [],
       "id": 17
     },
     {
@@ -152,6 +241,7 @@
       "type": "energy",
       "anime": false,
       "comments": [],
+      "likes": [],
       "id": 18
     },
     {
@@ -162,6 +252,7 @@
       "type": "energy",
       "anime": false,
       "comments": [],
+      "likes": [],
       "id": 19
     },
     {
@@ -172,6 +263,7 @@
       "type": "shaker",
       "anime": false,
       "comments": [],
+      "likes": [],
       "id": 20
     },
     {
@@ -182,6 +274,7 @@
       "type": "energy",
       "anime": false,
       "comments": [],
+      "likes": [],
       "id": 21
     },
     {
@@ -192,6 +285,7 @@
       "type": "shaker",
       "anime": false,
       "comments": [],
+      "likes": [],
       "id": 22
     },
     {
@@ -201,6 +295,7 @@
       "picture": "https://static.insales-cdn.com/images/products/1/7236/591035460/large_wgs.jpg",
       "type": "shaker",
       "anime": false,
+      "likes": [],
       "comments": [],
       "id": 23
     },
@@ -211,6 +306,7 @@
       "picture": "https://static.insales-cdn.com/images/products/1/5764/591009412/large_large_large_%D0%B7%D0%B8%D0%BF_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82.jpg",
       "type": "energy",
       "anime": false,
+      "likes": [],
       "comments": [],
       "id": 24
     },
@@ -221,6 +317,7 @@
       "picture": "https://static.insales-cdn.com/images/products/1/7177/591035401/large_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82_%D1%88%D0%B5%D0%B9%D0%BA%D0%B5%D1%80_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
       "type": "shaker",
       "anime": false,
+      "likes": [],
       "comments": [],
       "id": 25
     }

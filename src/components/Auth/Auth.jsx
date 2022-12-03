@@ -1,8 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -44,15 +42,6 @@ export default function Auth() {
             <ThemeProvider theme={theme}>
                 <Container component="main" maxWidth="lg">
                     <Box>
-                        <Typography
-                            sx={{
-                                mt: '5%',
-                                fontSize: '40px',
-                                fontWeight: 600,
-                            }}
-                        >
-                            Вход в кабинет покупателя
-                        </Typography>
                         <Box
                             sx={{
                                 mt: 3,
@@ -66,7 +55,7 @@ export default function Auth() {
                                 component="form"
                                 onSubmit={handleSubmit}
                                 noValidate
-                                sx={{ mt: 3 }}
+                                sx={{ mt: 3, pb: 4 }}
                             >
                                 <Typography
                                     sx={{
@@ -83,7 +72,7 @@ export default function Auth() {
                                         fontSize: { xs: 14, sm: 16 },
                                     }}
                                 >
-                                    Email
+                                    Почта
                                 </Typography>
                                 <TextField
                                     className="input-email"
@@ -131,51 +120,26 @@ export default function Auth() {
                                         justifyContent: 'space-between',
                                         alignItems: 'center',
                                     }}
-                                >
-                                    <Box
-                                        sx={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            mt: 1,
-                                        }}
-                                    >
-                                        {' '}
-                                        <Checkbox
-                                            value="remember"
-                                            color="primary"
-                                        />
-                                        <Typography sx={{ fontSize: 14 }}>
-                                            Remember me
-                                        </Typography>
-                                    </Box>
-                                    {/* <Link
-                                        className="links"
-                                        sx={{
-                                            mt: 1,
-                                            fontSize: 15,
-                                            color: 'black',
-                                            fontSize: { xs: 14, sm: 16 },
-                                        }}
-                                        href="#"
-                                        variant="body2"
-                                        color="primary"
-                                    >
-                                        Forgot password?
-                                    </Link> */}
-                                </Box>
+                                ></Box>
                                 {hasAccount ? (
                                     <Button
                                         className="button_sign_in"
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        sx={{ mt: 3, fontWeight: 600 }}
+                                        sx={{
+                                            mt: 3,
+                                            fontWeight: 600,
+                                            backgroundColor: '#0c6',
+                                            height: '55px',
+                                            marginBottom: '20px',
+                                        }}
                                         onClick={() => {
                                             handleLogin();
                                             navigate('/');
                                         }}
                                     >
-                                        Sign in
+                                        Войти
                                     </Button>
                                 ) : (
                                     <Button
@@ -183,10 +147,16 @@ export default function Auth() {
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        sx={{ mt: 3, fontWeight: 600 }}
+                                        sx={{
+                                            mt: 3,
+                                            fontWeight: 600,
+                                            backgroundColor: '#0c6',
+                                            height: '55px',
+                                            marginBottom: '20px',
+                                        }}
                                         onClick={handleSignup}
                                     >
-                                        Register
+                                        Зарегистрироваться
                                     </Button>
                                 )}
 
@@ -201,7 +171,10 @@ export default function Auth() {
                                         {hasAccount ? (
                                             <Link
                                                 className="links"
-                                                sx={{ color: 'black' }}
+                                                sx={{
+                                                    color: 'black',
+                                                    marginBottom: '100px',
+                                                }}
                                                 href="#"
                                                 variant="body2"
                                                 onClick={() =>
@@ -209,37 +182,29 @@ export default function Auth() {
                                                 }
                                             >
                                                 {
-                                                    "Don't have an account? Register now"
+                                                    'Нет аккаунта? Зарегистрируйтесь прямо сейчас'
                                                 }
                                             </Link>
                                         ) : (
                                             <Link
                                                 className="links"
-                                                sx={{ color: 'black' }}
+                                                sx={{
+                                                    color: 'black',
+                                                    marginBottom: '100px',
+                                                }}
                                                 href="#"
                                                 variant="body2"
                                                 onClick={() =>
                                                     setHasAccount(!hasAccount)
                                                 }
                                             >
-                                                {
-                                                    'Already have an account? Log In'
-                                                }
+                                                {'Уже есть аккаунт? Войдите'}
                                             </Link>
                                         )}
                                     </Grid>
                                 </Grid>
                             </Box>
                         </Box>
-
-                        <Box
-                            sx={{
-                                display: {
-                                    xs: 'none',
-                                },
-                            }}
-                            id="line"
-                        ></Box>
                     </Box>
                 </Container>
             </ThemeProvider>
