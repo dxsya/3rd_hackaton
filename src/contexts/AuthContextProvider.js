@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import fire from '../fire';
-export const authContext = React.createContext();
 
+export const authContext = React.createContext();
 export const useAuth = () => {
     return React.useContext(authContext);
 };
@@ -77,7 +77,7 @@ const AuthContextProvider = ({ children }) => {
     useEffect(() => {
         authListener();
     }, []);
-
+    console.log(user.uid);
     const values = {
         email,
         password,

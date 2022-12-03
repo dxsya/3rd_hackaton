@@ -3,8 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { useProducts } from '../../contexts/ProductContextProvider';
 import { getRandomProducts } from '../../helpers/functions';
 import ProductCard from '../ProductList/ProductCard';
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Recomendations = () => {
+    const navigate = useNavigate();
     const { products, getProducts } = useProducts();
 
     const [random, setRandom] = useState(0);
@@ -20,7 +24,7 @@ const Recomendations = () => {
             sx={{
                 background:
                     'linear-gradient(90deg, rgba(122,231,159,1) 0%, rgba(104,214,238,1) 25%, rgba(193,162,242,1) 60%, rgba(233,155,247,1) 74%, rgba(238,104,153,1) 96%)',
-                pt: 2,
+                paddingY: 2,
                 boxShadow: '0px 0px 12px 1px rgba(0,0,0,0.75) inset',
             }}
         >
@@ -45,6 +49,27 @@ const Recomendations = () => {
                     <ProductCard key={item.id} item={item} />
                 ))}
             </Box>
+            <Button
+                onClick={() => navigate('/products')}
+                sx={{
+                    width: {
+                        xs: '60%',
+                        sm: '60%',
+                        md: '40%',
+                        lg: '25%',
+                        xl: '20%',
+                    },
+                    backgroundColor: '#01cc65',
+                    fontSize: '16px',
+                    color: 'white',
+                    fontWeight: 600,
+                    padding: '8px',
+                    m: '0 auto',
+                    display: 'flex',
+                }}
+            >
+                Все товары <ArrowForwardIosOutlinedIcon />
+            </Button>
         </Box>
     );
 };

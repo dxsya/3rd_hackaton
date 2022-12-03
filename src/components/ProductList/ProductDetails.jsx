@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useCart } from '../../contexts/CartContextProvider';
 import { useProducts } from '../../contexts/ProductContextProvider';
 import Recomendations from '../Recomendantions/Recomendations';
+import Likes from './Likes';
 
 const ProductDetails = () => {
     const {
@@ -12,17 +13,21 @@ const ProductDetails = () => {
         deleteProduct,
         saveEditedProduct,
     } = useProducts();
+    const { id } = useParams();
+
     useEffect(() => {
         getProductDetails(id);
     }, []);
 
-    // console.log(productDetails);
     const { addProductToCart, checkProductInCart } = useCart();
-    const { id } = useParams();
     const navigate = useNavigate();
 
     const [product, setProduct] = useState({ ...productDetails });
     const [comment, setComment] = useState({});
+
+    useEffect(() => {
+        setProduct({ ...productDetails });
+    }, [productDetails]);
 
     const handleInput = (e) => {
         let newComment = { comment: e.target.value };
@@ -36,14 +41,13 @@ const ProductDetails = () => {
         setProduct(obj);
         saveEditedProduct(product, productDetails.id);
     };
+
     let com = [];
     if (!productDetails.comments) {
         com = [];
     } else {
         com = [...productDetails.comments];
     }
-
-    if (!productDetails.comments) return;
 
     return (
         <div>
@@ -90,7 +94,7 @@ const ProductDetails = () => {
                     ) : (
                         <></>
                     )}
-
+                    <Likes />
                     <Typography
                         sx={{ fontSize: '30px', color: 'red', fontWeight: 800 }}
                     >
@@ -227,11 +231,14 @@ const ProductDetails = () => {
                     margin: '10px auto',
                     boxShadow: '0px 0px 10px 7px rgba(34, 60, 80, 0.2)',
                     paddingY: '2%',
+                    display: 'flex',
+                    flexDirection: 'column-reverse',
                 }}
             >
                 {' '}
-                {com.map((item) => (
+                {com.map((item, index) => (
                     <Box
+                        key={index}
                         sx={{
                             width: '80%',
                             marginLeft: '8%',

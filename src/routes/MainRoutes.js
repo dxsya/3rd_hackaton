@@ -29,6 +29,7 @@ const MainRoutes = () => {
         { link: '/addBlog', element: <AddBlogPage />, id: 9 },
         { link: '/blog', element: <BlogListPage />, id: 10 },
         { link: '/wishlist', element: <WishlistPage />, id: 11 },
+        // { linl: '*', element: <NotFoundPage />, id: 12 },
     ];
 
     return (
