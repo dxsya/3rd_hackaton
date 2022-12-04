@@ -40,11 +40,6 @@ const pages = [
         name: 'Оптовые цены',
         link: '/products',
     },
-
-    {
-        name: 'Магазин',
-        link: '/products',
-    },
 ];
 const Footer = () => {
     const navigate = useNavigate();

@@ -43,7 +43,7 @@ const ProductList = () => {
             q: search,
         });
     }, [search]);
-
+    console.log(page);
     return (
         <>
             {' '}

@@ -250,10 +250,29 @@ const Cart = () => {
                                 alignItems: 'center',
                             }}
                         >
-                            <TextField
-                                placeholder="Введите промокод"
-                                sx={{ width: '40%', border: '1px solid #0c6' }}
-                            />
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    width: '40%',
+                                }}
+                            >
+                                <TextField
+                                    placeholder="Адрес"
+                                    sx={{
+                                        width: '100%',
+                                        border: '1px solid #0c6',
+                                        mb: 2,
+                                    }}
+                                />
+                                <TextField
+                                    placeholder="Номер Телефона"
+                                    sx={{
+                                        width: '100%',
+                                        border: '1px solid #0c6',
+                                    }}
+                                />
+                            </Box>
                             <Button
                                 sx={{
                                     fontSize: {
