@@ -10,6 +10,8 @@ import CartPage from '../pages/CartPage';
 import AddBlogPage from '../pages/AddBlogPage';
 import BlogListPage from '../pages/BlogListPage';
 import WishlistPage from '../pages/WishlistPage';
+import PaymentPage from '../pages/PaymentPage';
+import NotFoundPage from '../pages/NotFoundPage';
 
 const MainRoutes = () => {
     const PUBLIC_ROUTES = [
@@ -29,7 +31,8 @@ const MainRoutes = () => {
         { link: '/addBlog', element: <AddBlogPage />, id: 9 },
         { link: '/blog', element: <BlogListPage />, id: 10 },
         { link: '/wishlist', element: <WishlistPage />, id: 11 },
-        // { linl: '*', element: <NotFoundPage />, id: 12 },
+        { link: '*', element: <NotFoundPage />, id: 12 },
+        { link: '/payment', element: <PaymentPage />, id: 13 },
     ];
 
     return (

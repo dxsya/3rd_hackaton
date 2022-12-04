@@ -21,7 +21,6 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 
 const pages = [
     { name: 'Магазин', link: '/products' },
-    { name: 'Добавить', link: '/addProduct' },
     { name: 'Блоги', link: '/blog' },
     { name: 'О нас', link: '/aboutUs' },
 ];

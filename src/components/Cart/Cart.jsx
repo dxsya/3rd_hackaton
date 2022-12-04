@@ -183,9 +183,6 @@ const Cart = () => {
                                             display: 'block',
                                             width: '20px',
                                         }}
-                                        onClick={() =>
-                                            deleteCartProduct(product.item.id)
-                                        }
                                     >
                                         <DeleteOutlinedIcon />
                                     </Button>
@@ -278,6 +275,7 @@ const Cart = () => {
                                     },
                                     borderRadius: '6px',
                                 }}
+                                onClick={() => navigate('/payment')}
                             >
                                 Оформить заказ
                             </Button>
