@@ -154,7 +154,10 @@ export default function Auth() {
                                             height: '55px',
                                             marginBottom: '20px',
                                         }}
-                                        onClick={handleSignup}
+                                        onClick={() => {
+                                            handleSignup();
+                                            navigate('/products');
+                                        }}
                                     >
                                         Зарегистрироваться
                                     </Button>

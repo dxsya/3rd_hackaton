@@ -23,6 +23,7 @@ const AddProduct = () => {
         type: '',
         anime: false,
         comment: [],
+        likes: [],
     });
 
     const handleInput = (e) => {
