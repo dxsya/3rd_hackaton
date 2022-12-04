@@ -6,6 +6,7 @@ import { useCart } from '../../contexts/CartContextProvider';
 import { useProducts } from '../../contexts/ProductContextProvider';
 import { ADMIN } from '../../helpers/consts';
 import Recomendations from '../Recomendantions/Recomendations';
+import ImageViewer from './ImageViewer';
 import Likes from './Likes';
 
 const ProductDetails = () => {
@@ -95,8 +96,8 @@ const ProductDetails = () => {
                     alignItems: 'center',
                 }}
             >
-                <img src={productDetails.picture} alt="" width={'30%'} />
-
+                {/* <img src={productDetails.picture} alt="" /> */}
+                <ImageViewer picture={productDetails.picture} />
                 <Box
                     sx={{
                         display: 'flex',
