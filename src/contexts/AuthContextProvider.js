@@ -77,7 +77,6 @@ const AuthContextProvider = ({ children }) => {
     useEffect(() => {
         authListener();
     }, []);
-    console.log(user.uid);
     const values = {
         email,
         password,

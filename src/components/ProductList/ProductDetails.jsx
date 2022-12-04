@@ -1,8 +1,10 @@
 import { Box, Button, TextField, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContextProvider';
 import { useCart } from '../../contexts/CartContextProvider';
 import { useProducts } from '../../contexts/ProductContextProvider';
+import { ADMIN } from '../../helpers/consts';
 import Recomendations from '../Recomendantions/Recomendations';
 import Likes from './Likes';
 
@@ -14,6 +16,7 @@ const ProductDetails = () => {
         saveEditedProduct,
     } = useProducts();
     const { id } = useParams();
+    const { user } = useAuth();
 
     useEffect(() => {
         getProductDetails(id);
@@ -30,7 +33,11 @@ const ProductDetails = () => {
     }, [productDetails]);
 
     const handleInput = (e) => {
-        let newComment = { comment: e.target.value };
+        let newComment = {
+            comment: e.target.value,
+            user: user.email,
+            date: date(),
+        };
         setComment(newComment);
     };
     const handleClick = () => {
@@ -42,11 +49,34 @@ const ProductDetails = () => {
         saveEditedProduct(product, productDetails.id);
     };
 
+    function deleteComment(id) {
+        let obj = {
+            ...productDetails,
+        };
+        obj.comments.splice(id, 1);
+        setProduct(obj);
+        saveEditedProduct(product, productDetails.id);
+    }
+
     let com = [];
     if (!productDetails.comments) {
         com = [];
     } else {
         com = [...productDetails.comments];
+    }
+    function date() {
+        let newDate = new Date();
+        let dateString =
+            newDate.getFullYear() +
+            '-' +
+            newDate.getDate() +
+            '-' +
+            (newDate.getMonth() + 1) +
+            '_' +
+            newDate.getHours() +
+            ':' +
+            newDate.getMinutes();
+        return dateString;
     }
 
     return (
@@ -156,19 +186,23 @@ const ProductDetails = () => {
                             добавь в корзину
                         </Button>
                     )}
-                    <Box>
-                        <Button
-                            onClick={() => {
-                                deleteProduct(id);
-                                navigate('/products');
-                            }}
-                        >
-                            Delete
-                        </Button>
-                        <Button onClick={() => navigate(`edit/${id}`)}>
-                            Edit
-                        </Button>
-                    </Box>
+                    {user.email == ADMIN ? (
+                        <Box>
+                            <Button
+                                onClick={() => {
+                                    deleteProduct(id);
+                                    navigate('/products');
+                                }}
+                            >
+                                Delete
+                            </Button>
+                            <Button onClick={() => navigate(`edit/${id}`)}>
+                                Edit
+                            </Button>
+                        </Box>
+                    ) : (
+                        <></>
+                    )}
                 </Box>
             </Box>
             <Box
@@ -196,25 +230,48 @@ const ProductDetails = () => {
                         },
                     }}
                 />
-                <Button
-                    sx={{
-                        width: {
-                            xs: '80%',
-                            sm: '80%',
-                            md: '40%',
-                            lg: '40%',
-                            xl: '40%',
-                        },
-                        backgroundColor: '#01cc65',
-                        padding: '8px',
-                        fontSize: '18px',
-                        color: 'white',
-                        fontWeight: 600,
-                    }}
-                    onClick={() => handleClick()}
-                >
-                    Добавить
-                </Button>
+                {user.uid === undefined ? (
+                    <Button
+                        disabled
+                        sx={{
+                            width: {
+                                xs: '80%',
+                                sm: '80%',
+                                md: '40%',
+                                lg: '40%',
+                                xl: '40%',
+                            },
+                            backgroundColor: '#01cc65',
+                            padding: '8px',
+                            fontSize: '18px',
+                            color: 'white',
+                            fontWeight: 600,
+                        }}
+                        onClick={() => handleClick()}
+                    >
+                        Добавить
+                    </Button>
+                ) : (
+                    <Button
+                        sx={{
+                            width: {
+                                xs: '80%',
+                                sm: '80%',
+                                md: '40%',
+                                lg: '40%',
+                                xl: '40%',
+                            },
+                            backgroundColor: '#01cc65',
+                            padding: '8px',
+                            fontSize: '18px',
+                            color: 'white',
+                            fontWeight: 600,
+                        }}
+                        onClick={() => handleClick()}
+                    >
+                        Добавить
+                    </Button>
+                )}
             </Box>
             <Typography
                 variant="h6"
@@ -235,7 +292,7 @@ const ProductDetails = () => {
                     flexDirection: 'column-reverse',
                 }}
             >
-                {' '}
+                {}
                 {com.map((item, index) => (
                     <Box
                         key={index}
@@ -248,7 +305,61 @@ const ProductDetails = () => {
                             borderBottom: '1px solid #aeaeae',
                         }}
                     >
+                        {' '}
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                            }}
+                        >
+                            <Typography
+                                sx={{ color: '#aeaeae', fontSize: '14px' }}
+                            >
+                                {item.user}
+                            </Typography>
+                            <Typography
+                                sx={{ color: '#aeaeae', fontSize: '14px' }}
+                            >
+                                {item.date}
+                            </Typography>
+                        </Box>
                         {item.comment}
+                        {user.email == item.user && user.email != ADMIN ? (
+                            <>
+                                <Box>
+                                    <Button
+                                        onClick={() => deleteComment(index)}
+                                        sx={{
+                                            fontSize: '10px',
+                                            backgroundColor: '#0c6',
+                                            color: 'white',
+                                            height: '20px',
+                                        }}
+                                    >
+                                        удалить
+                                    </Button>
+                                </Box>
+                            </>
+                        ) : (
+                            <></>
+                        )}
+                        {user.email == ADMIN ? (
+                            <Box>
+                                <Button
+                                    onClick={() => deleteComment(index)}
+                                    sx={{
+                                        fontSize: '10px',
+                                        backgroundColor: '#0c6',
+                                        color: 'white',
+                                        height: '20px',
+                                    }}
+                                >
+                                    удалить
+                                </Button>
+                            </Box>
+                        ) : (
+                            <></>
+                        )}
                     </Box>
                 ))}
             </Box>
