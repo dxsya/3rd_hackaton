@@ -14,6 +14,7 @@ const Recomendations = () => {
     const [random, setRandom] = useState(0);
     useEffect(() => {
         getProducts().then((data) => {
+            console.log(data);
             let rand = getRandomProducts(data.length);
             setRandom(rand);
         });
