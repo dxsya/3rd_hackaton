@@ -1,4 +1,3 @@
-import { Scale } from '@mui/icons-material';
 import { Box } from '@mui/system';
 import React from 'react';
 

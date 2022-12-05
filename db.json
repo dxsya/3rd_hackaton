@@ -96,6 +96,11 @@
           "comment": "123",
           "user": "dxdgxd@gmail.com",
           "date": "2022-4-12_15:36"
+        },
+        {
+          "comment": "vsem privet",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-5-12_12:50"
         }
       ],
       "likes": [
@@ -104,6 +109,9 @@
         },
         {
           "like": "dxdgxd@gmail.com"
+        },
+        {
+          "like": "pokzer516@gmail.com"
         }
       ],
       "id": 5
