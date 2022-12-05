@@ -10,7 +10,11 @@ const ProductPagination = ({ page, setPage, pagesQty }) => {
             <Box>
                 <Stack spacing={2}>
                     <Pagination
-                        sx={{ m: 5, display: 'flex', justifyContent: 'center' }}
+                        sx={{
+                            m: 5,
+                            display: 'flex',
+                            justifyContent: 'center',
+                        }}
                         page={page}
                         onChange={handleChange}
                         count={pagesQty}

@@ -63,7 +63,7 @@ const Home = () => {
                         mb: 2,
                     }}
                 >
-                    IMBA ENERGY CLAN
+                    IMBA CLAN
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                     {clan.map((item, index) => (
