@@ -8,6 +8,9 @@ import { ADMIN } from '../../helpers/consts';
 import Recomendations from '../Recomendantions/Recomendations';
 import ImageViewer from './ImageViewer';
 import Likes from './Likes';
+import StarIcon from '@mui/icons-material/Star';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import { useWish } from '../../contexts/WishlistContextProvider';
 
 const ProductDetails = () => {
     const {
@@ -18,6 +21,8 @@ const ProductDetails = () => {
     } = useProducts();
     const { id } = useParams();
     const { user } = useAuth();
+
+    const { checkProductInWish, addProductToWish } = useWish();
 
     useEffect(() => {
         getProductDetails(id);
@@ -187,6 +192,41 @@ const ProductDetails = () => {
                             добавь в корзину
                         </Button>
                     )}
+                    {checkProductInWish(productDetails.id) ? (
+                        <Button
+                            sx={{
+                                color: 'black',
+                                width: {
+                                    xs: '80%',
+                                    sm: '80%',
+                                    md: '40%',
+                                    lg: '40%',
+                                    xl: '40%',
+                                },
+                                marginY: '10px',
+                            }}
+                            onClick={() => addProductToWish(productDetails)}
+                        >
+                            <StarIcon />
+                        </Button>
+                    ) : (
+                        <Button
+                            sx={{
+                                color: 'black',
+                                width: {
+                                    xs: '80%',
+                                    sm: '80%',
+                                    md: '40%',
+                                    lg: '40%',
+                                    xl: '40%',
+                                },
+                                marginY: '10px',
+                            }}
+                            onClick={() => addProductToWish(productDetails)}
+                        >
+                            <StarBorderIcon />
+                        </Button>
+                    )}
                     {user.email == ADMIN ? (
                         <Box>
                             <Button
@@ -231,6 +271,7 @@ const ProductDetails = () => {
                         },
                     }}
                 />
+
                 {user.uid === undefined ? (
                     <Button
                         disabled

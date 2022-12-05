@@ -337,7 +337,11 @@
       "type": "energy",
       "anime": false,
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "like": "pokzer516@gmail.com"
+        }
+      ],
       "id": 18
     },
     {
