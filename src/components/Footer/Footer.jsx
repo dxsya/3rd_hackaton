@@ -30,7 +30,7 @@ const pages = [
     },
     {
         name: 'Блог',
-        link: '/blogs',
+        link: '/blog',
     },
     {
         name: 'Корзина',

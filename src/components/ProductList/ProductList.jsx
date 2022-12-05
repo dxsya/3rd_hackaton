@@ -44,7 +44,7 @@ const ProductList = () => {
         });
     }, [search]);
     return (
-        <>
+        <Box>
             {' '}
             <Box
                 sx={{
@@ -520,7 +520,7 @@ const ProductList = () => {
                 setPage={setPage}
                 pagesQty={pagesQty}
             />
-        </>
+        </Box>
     );
 };
 

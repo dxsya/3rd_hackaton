@@ -135,11 +135,6 @@
           "date": "2022-4-12_15:25"
         },
         {
-          "comment": "test2",
-          "user": "dxdgxd@gmail.com",
-          "date": "2022-4-12_15:28"
-        },
-        {
           "comment": "test3",
           "user": "pokzer516@gmail.com",
           "date": "2022-4-12_15:36"
@@ -249,7 +244,11 @@
           "comment": "och vkusno"
         }
       ],
-      "likes": [],
+      "likes": [
+        {
+          "like": "dxdgxd@gmail.com"
+        }
+      ],
       "id": 10
     },
     {
@@ -282,7 +281,11 @@
       "type": "energy",
       "anime": false,
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "like": "dxdgxd@gmail.com"
+        }
+      ],
       "id": 13
     },
     {
