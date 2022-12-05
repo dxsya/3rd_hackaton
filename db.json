@@ -1,4 +1,3 @@
-
 {
   "products": [
     {
@@ -8,6 +7,113 @@
       "picture": "https://static.insales-cdn.com/images/products/1/371/605602163/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D0%B0%D0%BF%D0%B5%D0%BB%D1%8C%D1%81%D0%B8%D0%BD.jpg",
       "type": "energy",
       "anime": false,
+      "comments": [
+        {
+          "comment": "pokzer <#",
+          "user": "pokzer516@gmail.com"
+        },
+        {
+          "comment": "123",
+          "user": "pokzer516@gmail.com",
+          "date": "\"2022-12-03T19:46:06.434Z\""
+        },
+        {
+          "comment": "ne poluchilos(",
+          "user": "pokzer516@gmail.com",
+          "date": "\"2022-12-03T19:52:06.411Z\""
+        },
+        {
+          "comment": "test",
+          "user": "pokzer516@gmail.com",
+          "date": 2022
+        },
+        {
+          "comment": "test2",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-111-0"
+        },
+        {
+          "comment": "test3",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-111-4"
+        },
+        {
+          "comment": "test3",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-111-4"
+        },
+        {
+          "comment": "test5",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-111-4"
+        },
+        {
+          "comment": "test6",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-12-4"
+        },
+        {
+          "comment": "test7",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-5-11"
+        },
+        {
+          "comment": "test8",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-4-12"
+        },
+        {
+          "comment": "test9",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-4-121:58"
+        },
+        {
+          "comment": "test10",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-4-12_1:58"
+        },
+        {
+          "comment": "test10",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-4-12_1:58"
+        },
+        {
+          "comment": "test11",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-4-12_2:1"
+        },
+        {
+          "comment": "test12",
+          "user": "jopa.2@mail.com",
+          "date": "2022-4-12_2:12"
+        },
+        {
+          "comment": "test13",
+          "user": "dxdgxd@gmail.com",
+          "date": "2022-4-12_14:46"
+        },
+        {
+          "comment": "123",
+          "user": "dxdgxd@gmail.com",
+          "date": "2022-4-12_15:36"
+        },
+        {
+          "comment": "vsem privet",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-5-12_12:50"
+        }
+      ],
+      "likes": [
+        {
+          "like": "Ofe8LFqEMzTB0lhL7BOU4fu7HGx1"
+        },
+        {
+          "like": "dxdgxd@gmail.com"
+        },
+        {
+          "like": "pokzer516@gmail.com"
+        }
+      ],
       "id": 5
     },
     {
@@ -17,6 +123,63 @@
       "picture": "https://static.insales-cdn.com/images/products/1/4625/594080273/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0-1-%D0%B2%D0%B0%D0%B8%CC%86%D1%84%D1%83-_%D1%81%D0%B0%D0%B8%CC%86%D1%82_.jpg",
       "type": "energy",
       "anime": true,
+      "comments": [
+        {
+          "comment": "zxc",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-4-12_15:25"
+        },
+        {
+          "comment": "test1",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-4-12_15:25"
+        },
+        {
+          "comment": "test2",
+          "user": "dxdgxd@gmail.com",
+          "date": "2022-4-12_15:28"
+        },
+        {
+          "comment": "test3",
+          "user": "pokzer516@gmail.com",
+          "date": "2022-4-12_15:36"
+        },
+        {
+          "comment": "krasivaya TYAN",
+          "user": "antonpushka@mail.com",
+          "date": "2022-4-12_15:44"
+        },
+        {
+          "comment": "vatyat'",
+          "user": "abbasboss@mail.com",
+          "date": "2022-4-12_15:45"
+        },
+        {
+          "comment": "na cmku pohoja",
+          "user": "salamatbeast@mail.com",
+          "date": "2022-4-12_15:45"
+        }
+      ],
+      "likes": [
+        {
+          "like": "WDYK9IcDaQZhXW3NwdYGbhibiSk1"
+        },
+        {
+          "like": "dosya@zxc.com"
+        },
+        {
+          "like": "antonpushka@mail.com"
+        },
+        {
+          "like": "abbasboss@mail.com"
+        },
+        {
+          "like": "salamatbeast@mail.com"
+        },
+        {
+          "like": "dxdgxd@gmail.com"
+        }
+      ],
       "id": 6
     },
     {
@@ -26,6 +189,12 @@
       "picture": "https://static.insales-cdn.com/images/products/1/6640/591010288/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_1_%D1%82%D1%80%D0%BE%D0%BF%D0%B8%D0%BA_%D0%B0%D0%BD%D0%B8%D0%BC%D0%B5.jpg",
       "type": "energy",
       "anime": true,
+      "comments": [],
+      "likes": [
+        {
+          "like": "Ofe8LFqEMzTB0lhL7BOU4fu7HGx1"
+        }
+      ],
       "id": 7
     },
     {
@@ -35,6 +204,7 @@
       "picture": "https://static.insales-cdn.com/images/products/1/7092/591035316/large_large_720x750_amaterasu_1___%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
       "type": "shaker",
       "anime": true,
+      "comments": [],
       "id": 8
     },
     {
@@ -44,6 +214,18 @@
       "picture": "https://static.insales-cdn.com/images/products/1/5241/579916921/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_1_%D0%BC%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0_%D0%B0%D0%BD%D0%B8%D0%BC%D0%B5.png",
       "type": "energy",
       "anime": true,
+      "comments": [
+        {
+          "comment": "малина супер класс",
+          "user": "dxdgxd@gmail.com",
+          "date": "2022-4-12_14:42"
+        }
+      ],
+      "likes": [
+        {
+          "like": "dxdgxd@gmail.com"
+        }
+      ],
       "id": 9
     },
     {
@@ -53,6 +235,21 @@
       "picture": "https://static.insales-cdn.com/images/products/1/7557/619830661/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D1%84%D0%BE%D0%BA%D1%81.jpg",
       "type": "energy",
       "anime": false,
+      "comments": [
+        {
+          "comment": "sweetie fox top"
+        },
+        {
+          "comment": "top pronstar"
+        },
+        {
+          "comment": "och vkusno"
+        },
+        {
+          "comment": "och vkusno"
+        }
+      ],
+      "likes": [],
       "id": 10
     },
     {
@@ -62,6 +259,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/6915/591035139/large_720x750_waifu__1____%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
       "type": "shaker",
       "anime": true,
+      "comments": [],
+      "likes": [],
       "id": 11
     },
     {
@@ -71,6 +270,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/245/619815157/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D0%B1%D0%B5%D1%81.jpg",
       "type": "energy",
       "anime": false,
+      "comments": [],
+      "likes": [],
       "id": 12
     },
     {
@@ -80,6 +281,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/4388/579916068/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_1_%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB_%D0%B0%D0%BD%D0%B8%D0%BC%D0%B5.png",
       "type": "energy",
       "anime": false,
+      "comments": [],
+      "likes": [],
       "id": 13
     },
     {
@@ -89,6 +292,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/5953/584521537/large_720x750_oni___%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png",
       "type": "shaker",
       "anime": true,
+      "comments": [],
+      "likes": [],
       "id": 14
     },
     {
@@ -98,6 +303,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/3774/593571518/large_%D0%BD%D1%8D%D0%BA%D0%BE.jpg",
       "type": "energy",
       "anime": true,
+      "comments": [],
+      "likes": [],
       "id": 15
     },
     {
@@ -107,6 +314,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/4602/619827706/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D0%B2%D1%83%D0%BB%D1%8C%D1%84.jpg",
       "type": "energy",
       "anime": false,
+      "comments": [],
+      "likes": [],
       "id": 16
     },
     {
@@ -116,6 +325,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/6202/591009850/large_large_750x750_%D0%B0%D1%85%D0%B5%D0%B3%D0%B0%D0%BE___%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
       "type": "energy",
       "anime": true,
+      "comments": [],
+      "likes": [],
       "id": 17
     },
     {
@@ -125,6 +336,12 @@
       "picture": "https://static.insales-cdn.com/images/products/1/2611/619825715/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D0%B1%D0%B0%D0%BD%D0%B4%D0%B0.jpg",
       "type": "energy",
       "anime": false,
+      "comments": [],
+      "likes": [
+        {
+          "like": "pokzer516@gmail.com"
+        }
+      ],
       "id": 18
     },
     {
@@ -134,6 +351,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/5768/619828872/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D1%81%D0%B8%D0%B0.jpg",
       "type": "energy",
       "anime": false,
+      "comments": [],
+      "likes": [],
       "id": 19
     },
     {
@@ -143,6 +362,13 @@
       "picture": "https://static.insales-cdn.com/images/products/1/7612/600325564/large_720x750_holo___%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
       "type": "shaker",
       "anime": false,
+      "comments": [
+        {
+          "comment": "stavlyu like",
+          "user": "pokzer516@gmail.com"
+        }
+      ],
+      "likes": [],
       "id": 20
     },
     {
@@ -152,6 +378,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/2853/602057509/large_%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0_%D0%BD%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9.jpg",
       "type": "energy",
       "anime": false,
+      "comments": [],
+      "likes": [],
       "id": 21
     },
     {
@@ -161,6 +389,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/846/591029070/large_large_720x750_kitsune___%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
       "type": "shaker",
       "anime": false,
+      "comments": [],
+      "likes": [],
       "id": 22
     },
     {
@@ -170,6 +400,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/7236/591035460/large_wgs.jpg",
       "type": "shaker",
       "anime": false,
+      "likes": [],
+      "comments": [],
       "id": 23
     },
     {
@@ -179,6 +411,8 @@
       "picture": "https://static.insales-cdn.com/images/products/1/5764/591009412/large_large_large_%D0%B7%D0%B8%D0%BF_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82.jpg",
       "type": "energy",
       "anime": false,
+      "likes": [],
+      "comments": [],
       "id": 24
     },
     {
@@ -188,9 +422,158 @@
       "picture": "https://static.insales-cdn.com/images/products/1/7177/591035401/large_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82_%D1%88%D0%B5%D0%B9%D0%BA%D0%B5%D1%80_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
       "type": "shaker",
       "anime": false,
+      "likes": [],
+      "comments": [],
       "id": 25
     }
   ],
-  "blogs": []
+  "blogs": [
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/829/3326781/large_ongoing.jpg",
+      "title": "Что такое онгоинг?",
+      "description": "Многие поклонники японской анимации, желая лучше разбираться в аниме-терминологии, сталкиваются с множеством англоязычных и японоязычных  понятий. Слово “онгоинг” как раз является одним из таких.   Ниже мы вам объясним, что такое онгоинг и в какие произведения могут подходить под это определение.",
+      "link": "https://imba.shop/blogs/anime/chto-takoe-ongoing",
+      "id": 1
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/599/3359319/large_shonen-ai.jpg",
+      "title": "ТОП-10 лучших аниме в жанре сёнен-ай",
+      "description": "Слово сёнен-ай с японского переводится как “юношеская любовь”. Для этого жанра характерно повествование о романтической любви между молодыми парнями. В отличие от яоя, в сёнен-ай аниме не свойственно изображать эротические сцены. Таким образом целевой аудиторией жанра могут быть люди старше 16 лет.   И чтобы вы могли получше узнать об этом жанре, мы собрали список лучших сёнен-ай аниме. ",
+      "link": "https://imba.shop/blogs/anime/top-10-luchshikh-anime-v-zhanre-senen-aj",
+      "id": 2
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/4160/3297344/large_Best-Feel-Good-Anime.jpg",
+      "title": "ТОП-20 позитивных аниме для поднятия настроения",
+      "description": "Одним из лучших и эффективных средств против хандры и плохого настроения – это просмотр позитивного и комедийного аниме. Легкие повседневные тайтлы помогут вам не только эмоционально взбодриться, но и найти вдохновение в реальной жизни.   В этой статье мы собрали топ-20 аниме, которые смогут поднять вам настроение и расслабиться после тяжелого рабочего дня.",
+      "link": "https://imba.shop/blogs/anime/top-20-anime-kotorye-sdelayut-vas-schastlivee",
+      "id": 3
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/5090/3191778/large_psyco.jpg",
+      "title": "ТОП-10 аниме, где главный герой психопат",
+      "description": " Образы психопатов и социопатов стали одними из популярных как в кинематографе, так и в аниме. Причина такого явления проста: за харизматичными персонажами, которые игнорируют и нарушают социальные нормы, всегда интересно наблюдать. В этой статье мы собрали список из десяти аниме, где главные герои – психопаты или социопаты.",
+      "link": "https://imba.shop/blogs/anime/top-10-anime-gde-glavniy-geroy-psikhopat",
+      "id": 4
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/5090/3191778/large_psyco.jpg",
+      "title": "ТОП-10 аниме, где главный герой психопат",
+      "description": " Образы психопатов и социопатов стали одними из популярных как в кинематографе, так и в аниме. Причина такого явления проста: за харизматичными персонажами, которые игнорируют и нарушают социальные нормы, всегда интересно наблюдать. В этой статье мы собрали список из десяти аниме, где главные герои – психопаты или социопаты.",
+      "link": "https://imba.shop/blogs/anime/top-10-anime-gde-glavniy-geroy-psikhopat",
+      "id": 5
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/829/3326781/large_ongoing.jpg",
+      "title": "Что такое онгоинг?",
+      "description": "Многие поклонники японской анимации, желая лучше разбираться в аниме-терминологии, сталкиваются с множеством англоязычных и японоязычных  понятий. Слово “онгоинг” как раз является одним из таких.   Ниже мы вам объясним, что такое онгоинг и в какие произведения могут подходить под это определение.",
+      "link": "https://imba.shop/blogs/anime/chto-takoe-ongoing",
+      "id": 6
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/829/3326781/large_ongoing.jpg",
+      "title": "Что такое онгоинг?",
+      "description": "Многие поклонники японской анимации, желая лучше разбираться в аниме-терминологии, сталкиваются с множеством англоязычных и японоязычных  понятий. Слово “онгоинг” как раз является одним из таких.   Ниже мы вам объясним, что такое онгоинг и в какие произведения могут подходить под это определение.",
+      "link": "https://imba.shop/blogs/anime/chto-takoe-ongoing",
+      "id": 7
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/829/3326781/large_ongoing.jpg",
+      "title": "Что такое онгоинг?",
+      "description": "Многие поклонники японской анимации, желая лучше разбираться в аниме-терминологии, сталкиваются с множеством англоязычных и японоязычных  понятий. Слово “онгоинг” как раз является одним из таких.   Ниже мы вам объясним, что такое онгоинг и в какие произведения могут подходить под это определение.",
+      "link": "https://imba.shop/blogs/anime/chto-takoe-ongoing",
+      "id": 8
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/829/3326781/large_ongoing.jpg",
+      "title": "Что такое онгоинг?",
+      "description": "Многие поклонники японской анимации, желая лучше разбираться в аниме-терминологии, сталкиваются с множеством англоязычных и японоязычных  понятий. Слово “онгоинг” как раз является одним из таких.   Ниже мы вам объясним, что такое онгоинг и в какие произведения могут подходить под это определение.",
+      "link": "https://imba.shop/blogs/anime/chto-takoe-ongoing",
+      "id": 9
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/599/3359319/large_shonen-ai.jpg",
+      "title": "ТОП-10 лучших аниме в жанре сёнен-ай",
+      "description": "Слово сёнен-ай с японского переводится как “юношеская любовь”. Для этого жанра характерно повествование о романтической любви между молодыми парнями. В отличие от яоя, в сёнен-ай аниме не свойственно изображать эротические сцены. Таким образом целевой аудиторией жанра могут быть люди старше 16 лет.   И чтобы вы могли получше узнать об этом жанре, мы собрали список лучших сёнен-ай аниме. ",
+      "link": "https://imba.shop/blogs/anime/top-10-luchshikh-anime-v-zhanre-senen-aj",
+      "id": 10
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/599/3359319/large_shonen-ai.jpg",
+      "title": "ТОП-10 лучших аниме в жанре сёнен-ай",
+      "description": "Слово сёнен-ай с японского переводится как “юношеская любовь”. Для этого жанра характерно повествование о романтической любви между молодыми парнями. В отличие от яоя, в сёнен-ай аниме не свойственно изображать эротические сцены. Таким образом целевой аудиторией жанра могут быть люди старше 16 лет.   И чтобы вы могли получше узнать об этом жанре, мы собрали список лучших сёнен-ай аниме. ",
+      "link": "https://imba.shop/blogs/anime/top-10-luchshikh-anime-v-zhanre-senen-aj",
+      "id": 11
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/599/3359319/large_shonen-ai.jpg",
+      "title": "ТОП-10 лучших аниме в жанре сёнен-ай",
+      "description": "Слово сёнен-ай с японского переводится как “юношеская любовь”. Для этого жанра характерно повествование о романтической любви между молодыми парнями. В отличие от яоя, в сёнен-ай аниме не свойственно изображать эротические сцены. Таким образом целевой аудиторией жанра могут быть люди старше 16 лет.   И чтобы вы могли получше узнать об этом жанре, мы собрали список лучших сёнен-ай аниме. ",
+      "link": "https://imba.shop/blogs/anime/top-10-luchshikh-anime-v-zhanre-senen-aj",
+      "id": 12
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/5204/2634836/large_the_10_longest.png",
+      "title": "ТОП-10 самых длинных аниме в мире",
+      "description": " Во второй половине прошлого века стало все больше появляться аниме студий. Несомненно, это привело как к развитию технических возможностей для создания анимации, так и к расширению количества программ на японском телевидении. В это же время увеличилось число серийных аниме. Выпускались аниме, количество серий которых варьировались от 12 до 26, а бывали объемом свыше 200 серий.   Кроме того, именно в прошлом столетии стали транслироваться анимационные сериалы, которые выходят до сих пор и пользуются большой популярностью среди детей и взрослых. На сегодняшний день такие долгие аниме имеют свыше тысячи серий. С более конкретными примерами можно ознакомиться в нашей статье. ",
+      "link": "https://imba.shop/blogs/anime/top-10-samykh-dlinnykh-anime-v-mire",
+      "id": 13
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/5227/2634859/large_romantik.png",
+      "title": "Pомантические аниме для совместного просмотра",
+      "description": "Тема любви всегда интересовала человечество, так, еще в литературных памятниках античных культур большое внимание уделялось сюжетам о влюбленных богах и их подвигах ради возлюбленного. В наше время люди продолжают развивать всегда актуальную тему, и для этого они обращаются к анимации и кинематографу. Каждый автор стремится передать зрителю свое видение того, как выглядит романтика в разные периоды жизни.",
+      "link": "https://imba.shop/blogs/anime/luchshie-romanticheskie-anime-dlya-sovmestnogo-prosmotra",
+      "id": 18
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/5227/2634859/large_romantik.png",
+      "title": "Pомантические аниме для совместного просмотра",
+      "description": "Тема любви всегда интересовала человечество, так, еще в литературных памятниках античных культур большое внимание уделялось сюжетам о влюбленных богах и их подвигах ради возлюбленного. В наше время люди продолжают развивать всегда актуальную тему, и для этого они обращаются к анимации и кинематографу. Каждый автор стремится передать зрителю свое видение того, как выглядит романтика в разные периоды жизни.",
+      "link": "https://imba.shop/blogs/anime/luchshie-romanticheskie-anime-dlya-sovmestnogo-prosmotra",
+      "id": 19
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/5227/2634859/large_romantik.png",
+      "title": "Pомантические аниме для совместного просмотра",
+      "description": "Тема любви всегда интересовала человечество, так, еще в литературных памятниках античных культур большое внимание уделялось сюжетам о влюбленных богах и их подвигах ради возлюбленного. В наше время люди продолжают развивать всегда актуальную тему, и для этого они обращаются к анимации и кинематографу. Каждый автор стремится передать зрителю свое видение того, как выглядит романтика в разные периоды жизни.",
+      "link": "https://imba.shop/blogs/anime/luchshie-romanticheskie-anime-dlya-sovmestnogo-prosmotra",
+      "id": 20
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/5227/2634859/large_romantik.png",
+      "title": "Pомантические аниме для совместного просмотра",
+      "description": "Тема любви всегда интересовала человечество, так, еще в литературных памятниках античных культур большое внимание уделялось сюжетам о влюбленных богах и их подвигах ради возлюбленного. В наше время люди продолжают развивать всегда актуальную тему, и для этого они обращаются к анимации и кинематографу. Каждый автор стремится передать зрителю свое видение того, как выглядит романтика в разные периоды жизни.",
+      "link": "https://imba.shop/blogs/anime/luchshie-romanticheskie-anime-dlya-sovmestnogo-prosmotra",
+      "id": 21
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/829/3326781/large_ongoing.jpg",
+      "title": "Что такое онгоинг?",
+      "description": "Многие поклонники японской анимации, желая лучше разбираться в аниме-терминологии, сталкиваются с множеством англоязычных и японоязычных  понятий. Слово “онгоинг” как раз является одним из таких.   Ниже мы вам объясним, что такое онгоинг и в какие произведения могут подходить под это определение.",
+      "link": "https://imba.shop/blogs/anime/chto-takoe-ongoing",
+      "id": 22
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/829/3326781/large_ongoing.jpg",
+      "title": "Что такое онгоинг?",
+      "description": "Многие поклонники японской анимации, желая лучше разбираться в аниме-терминологии, сталкиваются с множеством англоязычных и японоязычных  понятий. Слово “онгоинг” как раз является одним из таких.   Ниже мы вам объясним, что такое онгоинг и в какие произведения могут подходить под это определение.",
+      "link": "https://imba.shop/blogs/anime/chto-takoe-ongoing",
+      "id": 23
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/599/3359319/large_shonen-ai.jpg",
+      "title": "ТОП-10 лучших аниме в жанре сёнен-ай",
+      "description": "Слово сёнен-ай с японского переводится как “юношеская любовь”. Для этого жанра характерно повествование о романтической любви между молодыми парнями. В отличие от яоя, в сёнен-ай аниме не свойственно изображать эротические сцены. Таким образом целевой аудиторией жанра могут быть люди старше 16 лет.   И чтобы вы могли получше узнать об этом жанре, мы собрали список лучших сёнен-ай аниме. ",
+      "link": "https://imba.shop/blogs/anime/top-10-luchshikh-anime-v-zhanre-senen-aj",
+      "id": 24
+    },
+    {
+      "image": "https://static.insales-cdn.com/images/articles/1/599/3359319/large_shonen-ai.jpg",
+      "title": "ТОП-10 лучших аниме в жанре сёнен-ай",
+      "description": "Слово сёнен-ай с японского переводится как “юношеская любовь”. Для этого жанра характерно повествование о романтической любви между молодыми парнями. В отличие от яоя, в сёнен-ай аниме не свойственно изображать эротические сцены. Таким образом целевой аудиторией жанра могут быть люди старше 16 лет.   И чтобы вы могли получше узнать об этом жанре, мы собрали список лучших сёнен-ай аниме. ",
+      "link": "https://imba.shop/blogs/anime/top-10-luchshikh-anime-v-zhanre-senen-aj",
+      "id": 25
+    }
+  ]
 }
-

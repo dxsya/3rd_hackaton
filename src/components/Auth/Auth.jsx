@@ -1,17 +1,14 @@
-import * as React from "react";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useAuth } from "../../contexts/AuthContextProvider";
-import { useNavigate } from "react-router-dom";
-// import "./Auth.css";
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Link from '@mui/material/Link';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useAuth } from '../../contexts/AuthContextProvider';
+import { useNavigate } from 'react-router-dom';
 // import AuthRightForm from "./AuthRightForm";
 
 const theme = createTheme();
@@ -35,81 +32,47 @@ export default function Auth() {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         console.log({
-            email: data.get("email"),
-            password: data.get("password"),
+            email: data.get('email'),
+            password: data.get('password'),
         });
     };
 
     return (
-        <Box className="auth">
+        <Box>
             <ThemeProvider theme={theme}>
-                <Typography
-                    sx={{
-                        mt: 12,
-                        fontSize: { xs: 30, sm: 40 },
-                        fontWeight: 700,
-                        ml: {
-                            md: 15,
-                        },
-                        textAlign: {
-                            xs: "center",
-                            md: "left",
-                        },
-                    }}
-                >
-                    YOUR ACCOUNT
-                </Typography>
                 <Container component="main" maxWidth="lg">
-                    <CssBaseline />
-                    <Box
-                        sx={{
-                            mb: 8,
-                            display: "flex",
-                            flexDirection: {
-                                xs: "column",
-                                md: "row",
-                            },
-                            justifyContent: {
-                                xs: "center",
-                                md: "space-around",
-                            },
-                            alignItems: {
-                                xs: "center",
-                                md: "flex-start",
-                            },
-                        }}
-                    >
+                    <Box>
                         <Box
                             sx={{
                                 mt: 3,
-                                display: "flex",
-                                flexDirection: "column",
-                                width: { xs: "90%", sm: "70%", md: "35%" },
+                                width: '50%',
+                                // display: "flex",
+                                // justifyContent: "center",
+                                // width: { xs: "90%", sm: "100%" },
                             }}
                         >
-                            <Typography
-                                sx={{
-                                    fontWeight: 700,
-                                    fontSize: 26,
-                                }}
-                                component="h1"
-                                variant="h5"
-                            >
-                                Sign In
-                            </Typography>
                             <Box
                                 component="form"
                                 onSubmit={handleSubmit}
                                 noValidate
-                                sx={{ mt: 3 }}
+                                sx={{ mt: 3, pb: 4 }}
                             >
+                                <Typography
+                                    sx={{
+                                        fontWeight: 700,
+                                        fontSize: 26,
+                                    }}
+                                    variant="h5"
+                                >
+                                    Вход
+                                </Typography>
                                 <Typography
                                     sx={{
                                         fontWeight: 600,
                                         fontSize: { xs: 14, sm: 16 },
                                     }}
                                 >
-                                    Email
+                                    Почта
                                 </Typography>
                                 <TextField
                                     className="input-email"
@@ -131,7 +94,7 @@ export default function Auth() {
                                     <Typography
                                         sx={{ fontWeight: 600, fontSize: 14 }}
                                     >
-                                        Password
+                                        Пароль
                                     </Typography>
                                     <TextField
                                         className="input-password"
@@ -147,61 +110,36 @@ export default function Auth() {
                                         onChange={(e) => {
                                             setPassword(e.target.value);
                                         }}
-                                        sx={{ borderRadius: "0" }}
+                                        sx={{ borderRadius: '0' }}
                                     />
                                 </Box>
 
                                 <Box
                                     sx={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center',
                                     }}
-                                >
-                                    <Box
-                                        sx={{
-                                            display: "flex",
-                                            alignItems: "center",
-                                            mt: 1,
-                                        }}
-                                    >
-                                        {" "}
-                                        <Checkbox
-                                            value="remember"
-                                            color="primary"
-                                        />
-                                        <Typography sx={{ fontSize: 14 }}>
-                                            Remember me
-                                        </Typography>
-                                    </Box>
-                                    <Link
-                                        className="links"
-                                        sx={{
-                                            mt: 1,
-                                            fontSize: 15,
-                                            color: "black",
-                                            fontSize: { xs: 14, sm: 16 },
-                                        }}
-                                        href="#"
-                                        variant="body2"
-                                        color="primary"
-                                    >
-                                        Forgot password?
-                                    </Link>
-                                </Box>
+                                ></Box>
                                 {hasAccount ? (
                                     <Button
                                         className="button_sign_in"
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        sx={{ mt: 3, mb: 2, fontWeight: 600 }}
+                                        sx={{
+                                            mt: 3,
+                                            fontWeight: 600,
+                                            backgroundColor: '#0c6',
+                                            height: '55px',
+                                            marginBottom: '20px',
+                                        }}
                                         onClick={() => {
                                             handleLogin();
-                                            navigate("/");
+                                            navigate('/');
                                         }}
                                     >
-                                        Sign in
+                                        Войти
                                     </Button>
                                 ) : (
                                     <Button
@@ -209,25 +147,37 @@ export default function Auth() {
                                         type="submit"
                                         fullWidth
                                         variant="contained"
-                                        sx={{ mt: 3, mb: 2, fontWeight: 600 }}
-                                        onClick={handleSignup}
+                                        sx={{
+                                            mt: 3,
+                                            fontWeight: 600,
+                                            backgroundColor: '#0c6',
+                                            height: '55px',
+                                            marginBottom: '20px',
+                                        }}
+                                        onClick={() => {
+                                            handleSignup();
+                                            navigate('/products');
+                                        }}
                                     >
-                                        Register
+                                        Зарегистрироваться
                                     </Button>
                                 )}
 
                                 <Grid
                                     container
                                     sx={{
-                                        display: "flex",
-                                        justifyContent: "center",
+                                        display: 'flex',
+                                        justifyContent: 'center',
                                     }}
                                 >
                                     <Grid item>
                                         {hasAccount ? (
                                             <Link
                                                 className="links"
-                                                sx={{ color: "black" }}
+                                                sx={{
+                                                    color: 'black',
+                                                    marginBottom: '100px',
+                                                }}
                                                 href="#"
                                                 variant="body2"
                                                 onClick={() =>
@@ -235,41 +185,29 @@ export default function Auth() {
                                                 }
                                             >
                                                 {
-                                                    "Don't have an account? Register now"
+                                                    'Нет аккаунта? Зарегистрируйтесь прямо сейчас'
                                                 }
                                             </Link>
                                         ) : (
                                             <Link
                                                 className="links"
-                                                sx={{ color: "black" }}
+                                                sx={{
+                                                    color: 'black',
+                                                    marginBottom: '100px',
+                                                }}
                                                 href="#"
                                                 variant="body2"
                                                 onClick={() =>
                                                     setHasAccount(!hasAccount)
                                                 }
                                             >
-                                                {
-                                                    "Already have an account? Log In"
-                                                }
+                                                {'Уже есть аккаунт? Войдите'}
                                             </Link>
                                         )}
                                     </Grid>
                                 </Grid>
                             </Box>
                         </Box>
-
-                        <Box
-                            sx={{
-                                display: {
-                                    xs: "none",
-                                    md: "block",
-                                },
-                            }}
-                            id="line"
-                        ></Box>
-
-                        {/* !===================================================================================================================================================================== */}
-                        {/* <AuthRightForm /> */}
                     </Box>
                 </Container>
             </ThemeProvider>

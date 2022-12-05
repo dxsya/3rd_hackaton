@@ -1,10 +1,14 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, ListItem, Typography } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../contexts/CartContextProvider';
+import StarIcon from '@mui/icons-material/Star';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import { useWish } from '../../contexts/WishlistContextProvider';
 
 const ProductCard = ({ item }) => {
     const { addProductToCart, checkProductInCart } = useCart();
+    const { addProductToWish, checkProductInWish } = useWish();
     const navigate = useNavigate();
     function titleShow(item) {
         if (item.title.length > 30) {
@@ -13,6 +17,7 @@ const ProductCard = ({ item }) => {
             return item.title;
         }
     }
+
     return (
         <>
             <Box
@@ -35,7 +40,19 @@ const ProductCard = ({ item }) => {
                     boxShadow: '0px 0px 15px 3px rgba(0,0,0,0.2)',
                 }}
             >
-                {' '}
+                {/* <ListItem
+                    sx={{
+                        padding: {
+                            xs: '0 2px',
+                            sm: '0 4px',
+                            md: '0 8px',
+                            lg: '0 12px',
+                            xl: '0 14px',
+                        },
+                    }}
+                >
+                    <StarOutlineOutlinedIcon sx={{ color: 'black' }} />
+                </ListItem>{' '} */}
                 <Box
                     onClick={() => navigate(`/productDetails/${item.id}`)}
                     sx={{
@@ -43,6 +60,7 @@ const ProductCard = ({ item }) => {
                         flexDirection: 'column',
                         alignContent: 'center',
                         alignItems: 'center',
+                        cursor: 'pointer',
                     }}
                 >
                     <img src={item.picture} alt={item.title} width={'70%'} />
@@ -54,6 +72,7 @@ const ProductCard = ({ item }) => {
                             width: '80%',
                             height: '50px',
                             textAlign: 'center',
+                            cursor: 'pointer',
                         }}
                     >
                         {titleShow(item)}
@@ -104,6 +123,21 @@ const ProductCard = ({ item }) => {
                         }}
                     >
                         добавь в Корзину
+                    </Button>
+                )}
+                {checkProductInWish(item.id) ? (
+                    <Button
+                        sx={{ color: 'black' }}
+                        onClick={() => addProductToWish(item)}
+                    >
+                        <StarIcon />
+                    </Button>
+                ) : (
+                    <Button
+                        sx={{ color: 'black' }}
+                        onClick={() => addProductToWish(item)}
+                    >
+                        <StarBorderIcon />
                     </Button>
                 )}
             </Box>

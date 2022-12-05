@@ -11,6 +11,36 @@ const imbashop = [
     'Карта сайта',
 ];
 
+const pages = [
+    {
+        name: 'Главная',
+        link: '/',
+    },
+    {
+        name: 'Магазин',
+        link: '/products',
+    },
+    {
+        name: 'Доставка',
+        link: '/delivery',
+    },
+    {
+        name: 'Контакты',
+        link: '/contacts',
+    },
+    {
+        name: 'Блог',
+        link: '/blogs',
+    },
+    {
+        name: 'Корзина',
+        link: '/cart',
+    },
+    {
+        name: 'Оптовые цены',
+        link: '/products',
+    },
+];
 const Footer = () => {
     const navigate = useNavigate();
     return (
@@ -18,7 +48,14 @@ const Footer = () => {
             <Box sx={{ background: 'black' }}>
                 <List
                     sx={{
-                        display: 'flex',
+                        display: {
+                            xs: 'none',
+                            sm: 'none',
+                            md: 'none',
+                            lg: 'flex',
+                            xl: 'flex',
+                        },
+
                         padding: '1%',
                         color: 'gray',
                         width: '95%',
@@ -27,60 +64,28 @@ const Footer = () => {
                         fontWeight: 500,
                     }}
                 >
-                    <ListItem
-                        onClick={() => navigate('/')}
-                        sx={{ cursor: 'pointer', justifyContent: 'center' }}
-                    >
-                        Главная
-                    </ListItem>
-                    <ListItem
-                        onClick={() => navigate('/products')}
-                        sx={{ cursor: 'pointer', justifyContent: 'center' }}
-                    >
-                        Магазин
-                    </ListItem>
-                    <ListItem
-                        onClick={() => navigate('/delivery')}
-                        sx={{ cursor: 'pointer', justifyContent: 'center' }}
-                    >
-                        Доставка
-                    </ListItem>
-                    <ListItem
-                        onClick={() => navigate('/contacts')}
-                        sx={{ cursor: 'pointer', justifyContent: 'center' }}
-                    >
-                        Контакты
-                    </ListItem>
-                    <ListItem
-                        onClick={() => navigate('/blog')}
-                        sx={{ cursor: 'pointer', justifyContent: 'center' }}
-                    >
-                        Блог
-                    </ListItem>
-                    <ListItem
-                        onClick={() => navigate('/cart')}
-                        sx={{ cursor: 'pointer', justifyContent: 'center' }}
-                    >
-                        Корзина
-                    </ListItem>
-                    <ListItem
-                        onClick={() => navigate('/cart')}
-                        sx={{
-                            cursor: 'pointer',
-                            justifyContent: 'center',
-                            textAlign: 'center',
-                        }}
-                    >
-                        Оптовые цены
-                    </ListItem>
-                    <ListItem
-                        onClick={() => navigate('/cart')}
-                        sx={{ cursor: 'pointer', justifyContent: 'center' }}
-                    >
-                        Исследования
-                    </ListItem>
+                    {pages.map((page, index) => (
+                        <ListItem
+                            key={index}
+                            onClick={() => navigate(page.link)}
+                            sx={{ cursor: 'pointer', justifyContent: 'center' }}
+                        >
+                            {page.name}
+                        </ListItem>
+                    ))}
                 </List>
-                <Divider sx={{ backgroundColor: 'white' }} />
+                <Divider
+                    sx={{
+                        backgroundColor: 'white',
+                        display: {
+                            xs: 'none',
+                            sm: 'none',
+                            md: 'none',
+                            lg: 'flex',
+                            xl: 'flex',
+                        },
+                    }}
+                />
                 <Box
                     sx={{
                         color: 'gray',
@@ -98,7 +103,17 @@ const Footer = () => {
                             />
                         </ListItem>
                     </List>
-                    <List>
+                    <List
+                        sx={{
+                            display: {
+                                xs: 'none',
+                                sm: 'none',
+                                md: 'none',
+                                lg: 'block',
+                                xl: 'block',
+                            },
+                        }}
+                    >
                         <ListItem
                             sx={{
                                 fontSize: '1.3em',
@@ -112,7 +127,17 @@ const Footer = () => {
                         <ListItem>8 800 777 96 80</ListItem>
                         <ListItem>(ПН - ПТ) 10:00 -19:00</ListItem>
                     </List>
-                    <List>
+                    <List
+                        sx={{
+                            display: {
+                                xs: 'none',
+                                sm: 'none',
+                                md: 'none',
+                                lg: 'block',
+                                xl: 'block',
+                            },
+                        }}
+                    >
                         <ListItem
                             sx={{
                                 fontSize: '1.3em',
@@ -148,7 +173,13 @@ const Footer = () => {
                     <List>
                         <ListItem
                             sx={{
-                                fontSize: '1.3em',
+                                fontSize: {
+                                    xs: '15px',
+                                    sm: '1.3em',
+                                    md: '1.3em',
+                                    lg: '1.3em',
+                                    xl: '1.3em',
+                                },
                                 fontWeight: 800,
                                 color: 'white',
                             }}
@@ -173,7 +204,17 @@ const Footer = () => {
                             </Link>
                         </ListItem>
                     </List>
-                    <List>
+                    <List
+                        sx={{
+                            display: {
+                                xs: 'none',
+                                sm: 'none',
+                                md: 'none',
+                                lg: 'block',
+                                xl: 'block',
+                            },
+                        }}
+                    >
                         <ListItem
                             sx={{
                                 fontSize: '1.3em',
