@@ -3,6 +3,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../contexts/CartContextProvider';
 
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+
 const ProductCard = ({ item }) => {
     const { addProductToCart, checkProductInCart } = useCart();
     const navigate = useNavigate();
@@ -109,6 +111,9 @@ const ProductCard = ({ item }) => {
                         добавь в Корзину
                     </Button>
                 )}
+                <Button sx={{ color: 'black' }}>
+                    <StarBorderIcon sx={{}} />
+                </Button>
             </Box>
         </>
     );
