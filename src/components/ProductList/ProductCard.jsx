@@ -1,11 +1,16 @@
-import { Box, Button, ListItem, Typography } from "@mui/material";
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useCart } from "../../contexts/CartContextProvider";
-import StarOutlineOutlinedIcon from "@mui/icons-material/StarOutlineOutlined";
+
+import { Box, Button, Typography } from '@mui/material';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../../contexts/CartContextProvider';
+import StarIcon from '@mui/icons-material/Star';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import { useWish } from '../../contexts/WishlistContextProvider';
+
 
 const ProductCard = ({ item }) => {
     const { addProductToCart, checkProductInCart } = useCart();
+    const { addProductToWish, checkProductInWish } = useWish();
     const navigate = useNavigate();
     function titleShow(item) {
         if (item.title.length > 30) {
@@ -14,6 +19,7 @@ const ProductCard = ({ item }) => {
             return item.title;
         }
     }
+
     return (
         <>
             <Box
@@ -119,6 +125,21 @@ const ProductCard = ({ item }) => {
                         }}
                     >
                         добавь в Корзину
+                    </Button>
+                )}
+                {checkProductInWish(item.id) ? (
+                    <Button
+                        sx={{ color: 'black' }}
+                        onClick={() => addProductToWish(item)}
+                    >
+                        <StarIcon />
+                    </Button>
+                ) : (
+                    <Button
+                        sx={{ color: 'black' }}
+                        onClick={() => addProductToWish(item)}
+                    >
+                        <StarBorderIcon />
                     </Button>
                 )}
             </Box>

@@ -6,9 +6,13 @@ import ProductCard from './ProductCard';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import ProductPagination from './ProductPagination';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContextProvider';
+import { ADMIN } from '../../helpers/consts';
 
 const ProductList = () => {
     const { products, getProducts, fetchByParams } = useProducts();
+
+    const { user } = useAuth();
 
     const navigate = useNavigate();
 
@@ -39,7 +43,7 @@ const ProductList = () => {
             q: search,
         });
     }, [search]);
-
+    console.log(page);
     return (
         <>
             {' '}
@@ -64,6 +68,19 @@ const ProductList = () => {
             >
                 {' '}
             </Box>
+            {user.email == ADMIN ? (
+                <Box sx={{ width: '90%', margin: '20px auto 0 auto' }}>
+                    {' '}
+                    <Button
+                        onClick={() => navigate('/addProduct')}
+                        sx={{ backgroundColor: '#0c6', color: 'white' }}
+                    >
+                        добавить товар
+                    </Button>
+                </Box>
+            ) : (
+                <></>
+            )}
             <Box
                 sx={{
                     m: 5,

@@ -1,14 +1,17 @@
-import { createTheme, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { useBlog } from "../../contexts/BlogContextProvaider";
-import BlogCard from "./BlogCard";
-import BlogPagination from "./BlogPagination";
+import { Button, createTheme, Typography } from '@mui/material';
+import { Box } from '@mui/system';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContextProvider';
+import { useBlog } from '../../contexts/BlogContextProvaider';
+import { ADMIN } from '../../helpers/consts';
+import BlogCard from './BlogCard';
+import BlogPagination from './BlogPagination';
 
 const BlogList = () => {
-    const { blogs, getBlog, fetchByParams } = useBlog();
-
+    const { blogs, getBlog } = useBlog();
+    const { user } = useAuth();
+    const navigate = useNavigate();
     useEffect(() => {
         getBlog();
     }, []);
@@ -43,20 +46,35 @@ const BlogList = () => {
             <Typography
                 variant="h3"
                 sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    fontWeight: "600",
-                    mt: "3%",
+
+                    display: 'flex',
+                    justifyContent: 'center',
+                    fontWeight: '600',
+                    mt: '3%',
+                    [theme.breakpoints.down('sm')]: {},
+
                 }}
             >
                 Блог Imba Shop
             </Typography>
-
+            {user.email == ADMIN ? (
+                <Box sx={{ width: '90%', margin: '20px auto 0 auto' }}>
+                    {' '}
+                    <Button
+                        onClick={() => navigate('/addBlog')}
+                        sx={{ backgroundColor: '#0c6', color: 'white' }}
+                    >
+                        добавить блог
+                    </Button>
+                </Box>
+            ) : (
+                <></>
+            )}
             <Box
                 sx={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    justifyContent: "space-evenly",
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-evenly',
                 }}
             >
                 {currentBlog().map((item) => (
