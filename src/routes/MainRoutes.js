@@ -1,3 +1,4 @@
+
 import React from 'react';
 import HomePage from '../pages/HomePage';
 import AuthPage from '../pages/AuthPage';
@@ -12,6 +13,7 @@ import BlogListPage from '../pages/BlogListPage';
 import WishlistPage from '../pages/WishlistPage';
 import PaymentPage from '../pages/PaymentPage';
 import NotFoundPage from '../pages/NotFoundPage';
+
 
 const MainRoutes = () => {
     const PUBLIC_ROUTES = [

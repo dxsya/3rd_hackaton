@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
+import { useLocation } from "react-router-dom";
 import { ACTIONS_BLOGS, JSON_API_BLOGS } from "../helpers/consts";
 
 export const blogContext = createContext();
@@ -21,10 +22,11 @@ const reducer = (state = INIT_STATE_BLOG, action) => {
 };
 
 const BlogContextProvaider = ({ children }) => {
+    const location = useLocation();
     const [state, dispatch] = useReducer(reducer, INIT_STATE_BLOG);
 
     async function getBlog() {
-        const { data } = await axios(JSON_API_BLOGS);
+        const { data } = await axios(`${JSON_API_BLOGS}${location.search}`);
         dispatch({
             type: ACTIONS_BLOGS.GET_BLOGS,
             payload: data,

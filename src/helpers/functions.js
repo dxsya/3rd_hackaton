@@ -1,5 +1,5 @@
 export function getProductCountInCart() {
-    const cart = JSON.parse(localStorage.getItem('cart'));
+    const cart = JSON.parse(localStorage.getItem("cart"));
     return cart ? cart.products.length : 0;
 }
 
