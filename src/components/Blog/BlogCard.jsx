@@ -2,8 +2,15 @@ import { Button, Typography, Link, createTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useBlog } from "../../contexts/BlogContextProvaider";
 
-const BlogCard = ({ item }) => {
+const BlogCard = ({ item, id }) => {
+    const navigate = useNavigate();
+    const { deleteBlog } = useBlog();
+
+    // useEffect(() => {
+    //     getBlog();
+    // }, []);
     const theme = createTheme({
         breakpoints: {
             values: {
@@ -104,6 +111,19 @@ const BlogCard = ({ item }) => {
                         {item.description.slice(0, 70) + "..."}
                     </Typography>
                 </Link>
+                <Button
+                    onClick={() => {
+                        deleteBlog(id);
+                        navigate("/blog");
+                    }}
+                    sx={{
+                        width: "100%",
+                        backgroundColor: "black",
+                        color: "white",
+                    }}
+                >
+                    Delete
+                </Button>
             </Box>
         </>
     );

@@ -47,7 +47,6 @@ const BlogList = () => {
                     justifyContent: "center",
                     fontWeight: "600",
                     mt: "3%",
-                    [theme.breakpoints.down("sm")]: {},
                 }}
             >
                 Блог Imba Shop
