@@ -184,7 +184,13 @@ const Cart = () => {
                                             width: '20px',
                                         }}
                                     >
-                                        <DeleteOutlinedIcon />
+                                        <DeleteOutlinedIcon
+                                            onClick={() =>
+                                                deleteCartProduct(
+                                                    product.item.id
+                                                )
+                                            }
+                                        />
                                     </Button>
                                 </Box>
                             </Box>

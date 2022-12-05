@@ -18,6 +18,8 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContextProvider';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import { useEffect } from 'react';
+import { useWish } from '../../contexts/WishlistContextProvider';
 
 const pages = [
     { name: 'Магазин', link: '/products' },
@@ -32,8 +34,12 @@ function ResponsiveAppBar() {
     } = useAuth();
 
     const location = useLocation();
-
-    const { cart } = useCart();
+    const { getWish } = useWish();
+    const { cart, getCart } = useCart();
+    useEffect(() => {
+        getCart();
+        getWish();
+    }, []);
     function productCount(cart) {
         let total = 0;
         cart.products.map((item) => {

@@ -4,6 +4,7 @@ import { Box } from '@mui/system';
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useBlog } from '../../contexts/BlogContextProvaider';
+import { useCart } from '../../contexts/CartContextProvider';
 import BlogCard from '../Blog/BlogCard';
 import Recomendations from '../Recomendantions/Recomendations';
 
@@ -45,8 +46,10 @@ const smi = [
 
 const Home = () => {
     const { blogs, getBlog } = useBlog();
+    const { getCart } = useCart();
     useEffect(() => {
         getBlog();
+        getCart();
     }, []);
     return (
         <div>
