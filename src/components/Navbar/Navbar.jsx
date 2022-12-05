@@ -20,6 +20,7 @@ import { useAuth } from '../../contexts/AuthContextProvider';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { useEffect } from 'react';
 import { useWish } from '../../contexts/WishlistContextProvider';
+import { getProductCountInCart } from '../../helpers/functions';
 
 const pages = [
     { name: 'Магазин', link: '/products' },
@@ -35,18 +36,12 @@ function ResponsiveAppBar() {
 
     const location = useLocation();
     const { getWish } = useWish();
-    const { cart, getCart } = useCart();
+    const { getCart } = useCart();
     useEffect(() => {
         getCart();
         getWish();
     }, []);
-    function productCount(cart) {
-        let total = 0;
-        cart.products.map((item) => {
-            total += +item.count;
-        });
-        return total;
-    }
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const handleCloseUserMenu = () => {
@@ -63,7 +58,12 @@ function ResponsiveAppBar() {
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
+    const [count, setCount] = React.useState(0);
+    const { addProductToCart } = useCart();
 
+    React.useEffect(() => {
+        setCount(getProductCountInCart);
+    }, [addProductToCart]);
     const navigate = useNavigate();
 
     return (
@@ -224,10 +224,7 @@ function ResponsiveAppBar() {
                                 cursor: 'pointer',
                             }}
                         >
-                            <Badge
-                                badgeContent={productCount(cart)}
-                                color="error"
-                            >
+                            <Badge badgeContent={count} color="error">
                                 <ShoppingCartOutlinedIcon
                                     sx={{ color: 'black' }}
                                 />
