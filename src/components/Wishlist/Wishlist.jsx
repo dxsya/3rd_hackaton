@@ -69,13 +69,7 @@ const Wishlist = () => {
                             <Box
                                 key={index}
                                 sx={{
-                                    display: {
-                                        xs: 'flex',
-                                        sm: 'flex',
-                                        md: 'flex',
-                                        lg: 'flex',
-                                        xl: 'flex',
-                                    },
+                                    display: 'flex',
                                     alignContent: 'center',
                                     alignItems: 'center',
                                     justifyContent: 'space-around',
