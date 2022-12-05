@@ -35,12 +35,6 @@ function ResponsiveAppBar() {
     } = useAuth();
 
     const location = useLocation();
-    const { getWish } = useWish();
-    const { getCart } = useCart();
-    useEffect(() => {
-        getCart();
-        getWish();
-    }, []);
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
