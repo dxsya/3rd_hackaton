@@ -22,7 +22,7 @@ const AddProduct = () => {
         picture: '',
         type: '',
         anime: false,
-        comment: [],
+        comments: [],
         likes: [],
     });
 

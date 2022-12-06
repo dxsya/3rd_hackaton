@@ -101,6 +101,31 @@
           "comment": "vsem privet",
           "user": "pokzer516@gmail.com",
           "date": "2022-5-12_12:50"
+        },
+        {
+          "comment": "123",
+          "user": "dxdgxd@gmail.com",
+          "date": "2022-6-12_0:58"
+        },
+        {
+          "comment": "zxc",
+          "user": "zxcghoul@mail.ru",
+          "date": "2022-6-12_1:10"
+        },
+        {
+          "comment": "super klassno",
+          "user": "zxcghoul322@mail.ru",
+          "date": "2022-6-12_1:26"
+        },
+        {
+          "comment": "asdbajksbd",
+          "user": "zxcghoul322@mail.ru",
+          "date": "2022-6-12_12:10"
+        },
+        {
+          "comment": "12гн312рг3г",
+          "user": "zxcghoul322@mail.ru",
+          "date": "2022-6-12_15:9"
         }
       ],
       "likes": [
@@ -111,7 +136,10 @@
           "like": "dxdgxd@gmail.com"
         },
         {
-          "like": "pokzer516@gmail.com"
+          "like": "zxcghoul@mail.ru"
+        },
+        {
+          "like": "zxcghoul322@mail.ru"
         }
       ],
       "id": 5
@@ -188,6 +216,9 @@
       "likes": [
         {
           "like": "Ofe8LFqEMzTB0lhL7BOU4fu7HGx1"
+        },
+        {
+          "like": "zxcghoul@mail.ru"
         }
       ],
       "id": 7

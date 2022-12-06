@@ -96,10 +96,15 @@ const Footer = () => {
                     }}
                 >
                     <List>
-                        <ListItem>
+                        <ListItem
+                            sx={{
+                                cursor: 'pointer',
+                            }}
+                        >
                             <img
                                 src="https://static.insales-cdn.com/assets/1/762/3212026/1669721932/logo-footer.svg"
                                 alt=""
+                                onClick={() => navigate('/')}
                             />
                         </ListItem>
                     </List>
@@ -119,7 +124,9 @@ const Footer = () => {
                                 fontSize: '1.3em',
                                 fontWeight: 800,
                                 color: 'white',
+                                cursor: 'pointer',
                             }}
+                            onClick={() => navigate('/contacts')}
                         >
                             Контакты
                         </ListItem>
@@ -143,7 +150,9 @@ const Footer = () => {
                                 fontSize: '1.3em',
                                 fontWeight: 800,
                                 color: 'white',
+                                cursor: 'pointer',
                             }}
+                            onClick={() => navigate('/delivery')}
                         >
                             Оплата
                         </ListItem>
@@ -182,6 +191,7 @@ const Footer = () => {
                                 },
                                 fontWeight: 800,
                                 color: 'white',
+                                cursor: 'default',
                             }}
                         >
                             {' '}
@@ -220,6 +230,7 @@ const Footer = () => {
                                 fontSize: '1.3em',
                                 fontWeight: 800,
                                 color: 'white',
+                                cursor: 'default',
                             }}
                         >
                             IMBA.SHOP
@@ -230,6 +241,7 @@ const Footer = () => {
                                 sx={{
                                     lineHeight: '75%',
                                     textDecoration: 'underline',
+                                    cursor: 'pointer',
                                 }}
                             >
                                 {item}

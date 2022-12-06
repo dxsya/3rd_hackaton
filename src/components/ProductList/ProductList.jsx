@@ -82,6 +82,58 @@ const ProductList = () => {
             )}
             <Box
                 sx={{
+                    width: '90%',
+                    margin: '0 auto',
+                    background:
+                        'url(https://static.insales-cdn.com/assets/1/762/3212026/1669721932/collection-bg.png) bottom center no-repeat',
+                    height: '220px',
+                    display: {
+                        xs: 'none',
+                        sm: 'none',
+                        md: 'flex',
+                        lg: 'flex',
+                        xl: 'flex',
+                    },
+                    alignItems: 'center',
+                    justifyContent: 'space-around',
+                    mt: '8%',
+                }}
+            >
+                <Box sx={{ color: 'white' }}>
+                    <Typography sx={{ fontSize: '36px', fontWeight: 600 }}>
+                        MORF
+                    </Typography>
+                    <Typography sx={{ fontSize: '24px' }}>
+                        148 тыс. подписчиков
+                    </Typography>
+                </Box>
+
+                <Box>
+                    <Button
+                        sx={{
+                            width: '100%',
+                            border: '3px solid green',
+                            color: 'green',
+                            fontWeight: 800,
+                            padding: '6% 20px',
+                            fontSize: '14px',
+                            color: 'white',
+                        }}
+                    >
+                        <YouTubeIcon sx={{ color: 'white', mr: 1 }} />{' '}
+                        Посмотреть канал
+                    </Button>
+                </Box>
+                <Box sx={{ width: '20%', mb: 10 }}>
+                    <img
+                        src="https://static.insales-cdn.com/images/collections/1/5313/88626369/large_morf.jpg"
+                        alt="morf"
+                        width={'100%'}
+                    />
+                </Box>
+            </Box>
+            <Box
+                sx={{
                     m: 5,
                     display: {
                         xs: 'flex',
@@ -436,58 +488,6 @@ const ProductList = () => {
                         </Button>
                     </>
                 )}
-            </Box>
-            <Box
-                sx={{
-                    width: '90%',
-                    margin: '0 auto',
-                    background:
-                        'url(https://static.insales-cdn.com/assets/1/762/3212026/1669721932/collection-bg.png) bottom center no-repeat',
-                    height: '220px',
-                    display: {
-                        xs: 'none',
-                        sm: 'none',
-                        md: 'flex',
-                        lg: 'flex',
-                        xl: 'flex',
-                    },
-                    alignItems: 'center',
-                    justifyContent: 'space-around',
-                    mt: '8%',
-                }}
-            >
-                <Box sx={{ color: 'white' }}>
-                    <Typography sx={{ fontSize: '36px', fontWeight: 600 }}>
-                        MORF
-                    </Typography>
-                    <Typography sx={{ fontSize: '24px' }}>
-                        148 тыс. подписчиков
-                    </Typography>
-                </Box>
-
-                <Box>
-                    <Button
-                        sx={{
-                            width: '100%',
-                            border: '3px solid green',
-                            color: 'green',
-                            fontWeight: 800,
-                            padding: '6% 20px',
-                            fontSize: '14px',
-                            color: 'white',
-                        }}
-                    >
-                        <YouTubeIcon sx={{ color: 'white', mr: 1 }} />{' '}
-                        Посмотреть канал
-                    </Button>
-                </Box>
-                <Box sx={{ width: '20%', mb: 10 }}>
-                    <img
-                        src="https://static.insales-cdn.com/images/collections/1/5313/88626369/large_morf.jpg"
-                        alt="morf"
-                        width={'100%'}
-                    />
-                </Box>
             </Box>
             <Box sx={{ width: '83%', margin: '40px auto 0 auto' }}>
                 <Input
