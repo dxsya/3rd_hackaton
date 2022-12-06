@@ -45,6 +45,15 @@ const smi = [
 ];
 
 const Home = () => {
+    const [scale, setScale] = React.useState(1);
+
+    const handleMouseOut = () => {
+        setScale(1);
+    };
+    const handleMouseOver = () => {
+        setScale(1.05);
+    };
+
     const { blogs, getBlog } = useBlog();
     const { getCart } = useCart();
     useEffect(() => {
@@ -150,7 +159,11 @@ const Home = () => {
                             alignContent: 'center',
                             border: '1px solid #aeaeae',
                             height: '100%',
+                            transform: `scale(${scale})`,
+                            transition: '1s',
                         }}
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}
                     >
                         <img
                             src="https://static.insales-cdn.com/assets/1/2446/3221902/1669973951/u9.jpg"
@@ -187,7 +200,11 @@ const Home = () => {
                             ml: 4,
                             border: '1px solid #aeaeae',
                             height: '100%',
+                            transform: `scale(${scale})`,
+                            transition: '1s',
                         }}
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}
                     >
                         <img
                             src="https://static.insales-cdn.com/assets/1/2446/3221902/1669973951/u10.jpg"

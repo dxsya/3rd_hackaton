@@ -1,10 +1,10 @@
-import React from "react";
-import Typography from "@mui/material/Typography";
+import React from 'react';
+import Typography from '@mui/material/Typography';
 
-import { Link } from "@mui/material";
-import { createTheme, List, ListItem } from "@mui/material";
-import { Box } from "@mui/system";
-import ContactMap from "./ContactMap";
+import { Link } from '@mui/material';
+import { createTheme, List, ListItem } from '@mui/material';
+import { Box } from '@mui/system';
+import ContactMap from './ContactMap';
 
 const Contact = () => {
     const theme = createTheme({
@@ -20,57 +20,61 @@ const Contact = () => {
         <>
             <Box
                 sx={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    boxSizing: "border-box",
-                    margin: "0",
+                    width: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    boxSizing: 'border-box',
+                    margin: '0',
                 }}
             >
                 <Box>
                     <Typography
                         sx={{
-                            fontWeight: "600",
-                            fontSize: "19px",
+                            fontWeight: '600',
+                            fontSize: '19px',
 
-                            mt: "2%",
+                            mt: '2%',
                         }}
                         component="h1"
                         variant="h5"
                     >
-                        Контакты IMBA Game Energy{" "}
+                        Контакты IMBA Game Energy{' '}
                     </Typography>
                     <Typography
                         sx={{
-                            mt: "2%",
-                            mb: "2%",
+                            mt: '2%',
+                            mb: '2%',
                         }}
                     >
                         Как с нами связаться
                     </Typography>
                     <Box
                         sx={{
-                            display: "flex",
-                            [theme.breakpoints.down("lg")]: {
-                                display: "block",
+                            display: 'flex',
+                            [theme.breakpoints.down('lg')]: {
+                                display: 'block',
                             },
                         }}
                     >
                         <Box
                             sx={{
-                                border: "1px solid black",
+                                border: '1px solid black',
+                                width: {
+                                    xs: '100%',
+                                    md: '40%',
+                                },
                             }}
                         >
                             <Box
                                 sx={{
-                                    padding: "3%",
+                                    padding: '3%',
                                 }}
                             >
                                 <Typography
                                     sx={{
-                                        fontWeight: "600",
-                                        fontSize: "14px",
-                                        mt: "8%",
+                                        fontWeight: '600',
+                                        fontSize: '14px',
+                                        mt: '8%',
                                     }}
                                     component="h1"
                                     variant="h5"
@@ -80,9 +84,9 @@ const Contact = () => {
                                 <Link>8 800 777 96 80</Link>
                                 <Typography
                                     sx={{
-                                        fontWeight: "600",
-                                        fontSize: "14px",
-                                        mt: "8%",
+                                        fontWeight: '600',
+                                        fontSize: '14px',
+                                        mt: '8%',
                                     }}
                                     component="h1"
                                     variant="h5"
@@ -92,9 +96,9 @@ const Contact = () => {
                                 <Link>info@imba.shop</Link>
                                 <Typography
                                     sx={{
-                                        fontWeight: "600",
-                                        fontSize: "14px",
-                                        mt: "8%",
+                                        fontWeight: '600',
+                                        fontSize: '14px',
+                                        mt: '8%',
                                     }}
                                     component="h1"
                                     variant="h5"
@@ -104,15 +108,15 @@ const Contact = () => {
                                 <Link>partners@imba.shop</Link>
                                 <Typography
                                     sx={{
-                                        fontWeight: "600",
-                                        fontSize: "14px",
-                                        mt: "8%",
+                                        fontWeight: '600',
+                                        fontSize: '14px',
+                                        mt: '8%',
                                     }}
                                     component="h1"
                                     variant="h5"
                                 >
                                     Адрес
-                                    <Typography sx={{ mb: "8%", width: "80%" }}>
+                                    <Typography sx={{ mb: '8%', width: '80%' }}>
                                         603005, г. Нижний Новгород, ул Ульянова,
                                         д. 7, помещение 5
                                     </Typography>
@@ -122,33 +126,33 @@ const Contact = () => {
                         <Box>
                             <Box
                                 sx={{
-                                    padding: "3%",
-                                    ml: "18px",
-                                    [theme.breakpoints.down("sm")]: {
-                                        ml: "0",
+                                    padding: '3%',
+                                    ml: '18px',
+                                    [theme.breakpoints.down('sm')]: {
+                                        ml: '0',
                                     },
                                 }}
                             >
                                 <Typography
                                     sx={{
-                                        fontWeight: "600",
-                                        fontSize: "15px",
-                                        display: "flex",
+                                        fontWeight: '600',
+                                        fontSize: '15px',
+                                        display: 'flex',
                                     }}
                                     component="h1"
                                     variant="h5"
                                 >
                                     Полное наименование организации
                                 </Typography>
-                                <Typography sx={{ width: "80%" }}>
+                                <Typography sx={{ width: '80%' }}>
                                     Общество с ограниченной ответственностью
                                     «ДМСК»
                                 </Typography>
                                 <Typography
                                     sx={{
-                                        fontWeight: "600",
-                                        fontSize: "15px",
-                                        mt: "6%",
+                                        fontWeight: '600',
+                                        fontSize: '15px',
+                                        mt: '6%',
                                     }}
                                     component="h1"
                                     variant="h5"
@@ -161,9 +165,9 @@ const Contact = () => {
                                 </Typography>
                                 <Typography
                                     sx={{
-                                        fontWeight: "600",
-                                        fontSize: "15px",
-                                        mt: "6%",
+                                        fontWeight: '600',
+                                        fontSize: '15px',
+                                        mt: '6%',
                                     }}
                                     component="h1"
                                     variant="h5"
@@ -173,9 +177,9 @@ const Contact = () => {
                                 <Typography>1187746169962</Typography>
                                 <Typography
                                     sx={{
-                                        fontWeight: "600",
-                                        fontSize: "15px",
-                                        mt: "6%",
+                                        fontWeight: '600',
+                                        fontSize: '15px',
+                                        mt: '6%',
                                     }}
                                     component="h1"
                                     variant="h5"
@@ -188,10 +192,10 @@ const Contact = () => {
                     </Box>
                     <Typography
                         sx={{
-                            fontWeight: "600",
-                            fontSize: "15px",
-                            display: "flex",
-                            mt: "16px",
+                            fontWeight: '600',
+                            fontSize: '15px',
+                            display: 'flex',
+                            mt: '16px',
                         }}
                         component="h1"
                         variant="h5"
